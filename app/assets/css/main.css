@@ -1,2 +1,32 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+:root {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f9fe;
+
+  --color-text-primary: #71717b;
+  --color-text-secondary: #71717b;
+  --color-text-muted: #9f9fa9;
+
+  --color-blue: #2563eb;
+  --color-gradient-start: #0055ff;
+  --color-gradient-end: #ff007b;
+}
+
+.dark {
+  /* Backgrounds */
+  --color-bg-primary: #000000; /* Main dark blue/black background */
+  --color-bg-secondary: #101828; /* Slightly lighter dark section background */
+
+  /* Text */
+  --color-text-primary: #cad5e2; /* Near-white for headings */
+  --color-text-secondary: #90a1b9; /* Gray for paragraphs */
+  --color-text-light: #62748e; /* Dark text (used on inverted buttons) */
+
+  --color-blue: #2563eb;
+  --color-gradient-start: #0055ff;
+  --color-gradient-end: #ff007b;
+
+  --color-border: #314158;
+}
