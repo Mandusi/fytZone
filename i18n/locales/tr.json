@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "tryNow": "Hemen Dene"
+  },
+  "hero": {
+    "title": "Spor Salonunu",
+    "titleHighlight": "AI ile Tasarla",
+    "description": "AI destekli spor salonu tasarım aracımızla fitness alanınızı dönüştürün. İhtiyaçlarınıza ve tercihlerinize göre özelleştirilmiş mükemmel antrenman ortamı oluşturun.",
+    "cta": "Hemen Dene"
+  },
+  "about": {
+    "title": "Hakkında",
+    "description": "FytZone, son teknoloji yapay zeka ile spor salonu tasarımında devrim yaratıyor. Fitness meraklıları ve spor salonu sahiplerinin verimlilik, güvenlik ve motivasyonu maksimize eden optimal antrenman alanları oluşturmasına yardımcı oluyoruz.",
+    "features": {
+      "equipment": "Maksimum güvenlik ve verimlilik için akıllı ekipman yerleştirme ve aralık optimizasyonu.",
+      "activity": "Fitness hedefleriniz ve mevcut alanınıza dayalı kişiselleştirilmiş düzen önerileri.",
+      "health": "Daha iyi antrenmanlar ve daha hızlı iyileşme sağlayan sağlık odaklı tasarım ilkeleri."
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Fitness alanınızı dönüştürmeye hazır mısınız? AI destekli spor salonu tasarım çözümlerimiz hakkında daha fazla bilgi almak için bizimle iletişime geçin.",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "messagePlaceholder": "Bir şeyler yazın...",
+    "send": "Gönder"
+  },
+  "common": {
+    "language": "Dil"
+  }
+}

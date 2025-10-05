@@ -29,14 +29,14 @@
           class="transition-colors hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
-          >Home</NuxtLink
+          >{{ $t("nav.home") }}</NuxtLink
         >
         <NuxtLink
           to="/#about"
           class="transition-colors hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
-          >About</NuxtLink
+          >{{ $t("nav.about") }}</NuxtLink
         >
         <NuxtLink
           to="/#contact"
@@ -44,7 +44,7 @@
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
         >
-          Contact
+          {{ $t("nav.contact") }}
         </NuxtLink>
       </nav>
 
@@ -64,6 +64,21 @@
             }"
           />
         </div>
+
+        <!-- Language Switcher -->
+        <UDropdownMenu
+          :items="languageItems"
+          :popper="{ placement: 'bottom-end' }"
+        >
+          <UButton
+            color="neutral"
+            variant="ghost"
+            :label="currentLocale.toUpperCase()"
+            trailing-icon="i-lucide-chevron-down"
+            size="sm"
+          />
+        </UDropdownMenu>
+
         <div
           class="flex items-center gap-2 border px-3 py-1 rounded-full hover:shadow-md transition-shadow duration-200"
         >
@@ -74,7 +89,7 @@
               'border-gray-300 dark:border-gray-700 text-text-primary': true,
             }"
           >
-            Try Now
+            {{ $t("nav.tryNow") }}
             <UIcon name="i-lucide-sparkles" size="16" />
           </NuxtLink>
         </div>
@@ -85,6 +100,7 @@
 
 <script setup lang="ts">
 const colorMode = useColorMode();
+const { locale, setLocale } = useI18n();
 
 const toggleColorMode = () => {
   colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
@@ -95,4 +111,35 @@ const iconName = computed(() => {
     ? "i-lucide-moon" // Dark mode shows Moon icon
     : "i-lucide-sun-medium"; // Light mode shows Sun icon
 });
+
+const currentLocale = computed(() => locale.value);
+
+const languageItems = computed(() => [
+  [
+    {
+      label: "English",
+      icon: "i-lucide-globe",
+      onSelect: () => {
+        console.log("Switching to English");
+        setLocale("en");
+      },
+    },
+    {
+      label: "Türkçe",
+      icon: "i-lucide-globe",
+      onSelect: () => {
+        console.log("Switching to Turkish");
+        setLocale("tr");
+      },
+    },
+    {
+      label: "Deutsch",
+      icon: "i-lucide-globe",
+      onSelect: () => {
+        console.log("Switching to German");
+        setLocale("ger");
+      },
+    },
+  ],
+]);
 </script>

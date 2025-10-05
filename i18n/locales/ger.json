@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "tryNow": "Jetzt testen"
+  },
+  "hero": {
+    "title": "Gestalten Sie Ihr Fitnessstudio mit",
+    "titleHighlight": "KI",
+    "description": "Verwandeln Sie Ihren Fitnessbereich mit unserem KI-gestützten Fitnessstudio-Design-Tool. Schaffen Sie die perfekte Trainingsumgebung, die auf Ihre Bedürfnisse und Vorlieben zugeschnitten ist.",
+    "cta": "Jetzt testen"
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "FytZone revolutioniert das Fitnessstudio-Design durch modernste künstliche Intelligenz. Wir helfen Fitness-Enthusiasten und Fitnessstudio-Besitzern dabei, optimale Trainingsbereiche zu schaffen, die Effizienz, Sicherheit und Motivation maximieren.",
+    "features": {
+      "equipment": "Intelligente Geräteaufstellung und Abstandsoptimierung für maximale Sicherheit und Effizienz.",
+      "activity": "Personalisierte Layout-Empfehlungen basierend auf Ihren Fitnesszielen und verfügbarem Platz.",
+      "health": "Gesundheitsorientierte Designprinzipien, die bessere Workouts und schnellere Erholung fördern."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Bereit, Ihren Fitnessbereich zu verwandeln? Kontaktieren Sie uns, um mehr über unsere KI-gestützten Fitnessstudio-Design-Lösungen zu erfahren.",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "messagePlaceholder": "Schreiben Sie etwas...",
+    "send": "Senden"
+  },
+  "common": {
+    "language": "Sprache"
+  }
+}
