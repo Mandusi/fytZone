@@ -4,5 +4,6 @@
   <div>
     <AppHero />
     <AppAbout />
+    <AppContact />
   </div>
 </template>

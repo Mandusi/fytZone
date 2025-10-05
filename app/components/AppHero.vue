@@ -9,7 +9,7 @@
       <h1 class="text-7xl font-bold">
         Design Your Gym with
         <span
-          class="bg-gradient-to-b from-[#0055ff] to-[#ff007b] text-transparent bg-clip-text"
+          class="bg-gradient-to-b from-gradient-start to-gradient-end text-transparent bg-clip-text"
           >AI</span
         >
       </h1>
