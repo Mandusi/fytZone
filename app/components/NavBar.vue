@@ -25,7 +25,7 @@
         class="flex-1 gap-6 justify-center items-center hidden md:flex font-medium"
       >
         <NuxtLink
-          to="/"
+          to="/#home"
           class="transition-colors hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
@@ -39,7 +39,7 @@
           >About</NuxtLink
         >
         <NuxtLink
-          to="/contact"
+          to="/#contact"
           class="transition-colors hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"

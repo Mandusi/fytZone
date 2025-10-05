@@ -4,7 +4,11 @@
     class="flex w-full h-screen bg-secondary-bg justify-center items-center"
   >
     <div class="max-w-4xl flex flex-col p-2 md:p-0 gap-8">
-      <h2 class="text-4xl font-bold font-[Inter]">About</h2>
+      <h2
+        class="text-4xl font-bold text-black dark:text-primary-text font-[Inter]"
+      >
+        About
+      </h2>
       <p class="mt-4 text-lg">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
