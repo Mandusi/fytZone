@@ -7,18 +7,32 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "@nuxt/ui",
+    "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
   ],
   css: ["~/assets/css/main.css"],
-  ui: {
-    prefix: "Nuxt",
-  },
+  ssr: false,
 
   i18n: {
     locales: [
-      { code: "en", language: "en-US" },
-      { code: "tr", language: "tr-TR" },
+      { code: "en", language: "English" },
+      { code: "tr", language: "Turkish" },
     ],
     defaultLocale: "en",
+  },
+
+  colorMode: {
+    preference: "system",
+    storageKey: "nuxt-color-mode",
+    classSuffix: "",
+  },
+
+  icon: {
+    customCollections: [
+      {
+        prefix: "custom",
+        dir: "./app/assets/icons",
+      },
+    ],
   },
 });

@@ -1,32 +1,55 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-:root {
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f5f9fe;
+@theme {
+  --color-primary-bg: #ffffff;
+  --color-secondary-bg: #f5f9fe;
 
-  --color-text-primary: #71717b;
-  --color-text-secondary: #71717b;
-  --color-text-muted: #9f9fa9;
+  --color-primary-text: #71717b;
+  --color-secondary-text: #71717b;
+  --color-muted-text: #9f9fa9;
 
-  --color-blue: #2563eb;
+  --color-button: #2563eb;
   --color-gradient-start: #0055ff;
   --color-gradient-end: #ff007b;
+
+  --spacing: 0.25rem;
 }
 
 .dark {
-  /* Backgrounds */
-  --color-bg-primary: #000000; /* Main dark blue/black background */
-  --color-bg-secondary: #101828; /* Slightly lighter dark section background */
+  --color-primary-bg: #000000;
+  --color-secondary-bg: #101828;
 
-  /* Text */
-  --color-text-primary: #cad5e2; /* Near-white for headings */
-  --color-text-secondary: #90a1b9; /* Gray for paragraphs */
-  --color-text-light: #62748e; /* Dark text (used on inverted buttons) */
+  --color-primary-text: #cad5e2;
+  --color-secondary-text: #90a1b9;
+  --color-light-text: #62748e;
 
-  --color-blue: #2563eb;
+  --color-button: #2563eb;
   --color-gradient-start: #0055ff;
   --color-gradient-end: #ff007b;
 
   --color-border: #314158;
+}
+
+html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-text);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to bottom,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
