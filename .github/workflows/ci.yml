@@ -4,24 +4,25 @@ name: Node CI
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the repo
+      # 1. Checkout repo
       - uses: actions/checkout@v3
 
-      # 2. Setup Node.js and pnpm
+      # 2. Setup Node.js (pnpm will be available)
       - uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: "pnpm"
 
-      # 3. Install dependencies using pnpm
+      # 3. Install pnpm globally
+      - run: corepack enable && corepack prepare pnpm@latest --activate
+
+      # 4. Install dependencies
       - run: pnpm install
 
-      # 4. Build the project
+      # 5. Build the project
       - run: pnpm build
