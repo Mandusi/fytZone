@@ -26,9 +26,9 @@ export default defineNuxtConfig({
         file: "tr.json",
       },
       {
-        code: "ger",
+        code: "de",
         name: "German",
-        file: "ger.json",
+        file: "de.json",
       },
     ],
     defaultLocale: "en",

@@ -46,6 +46,14 @@
         >
           {{ $t("nav.contact") }}
         </NuxtLink>
+        <NuxtLink
+          to="/#blogs"
+          class="transition-colors hover:text-accent-blue"
+          active-class="text-accent-blue"
+          :class="{ 'text-text-primary': true }"
+        >
+          Blogs
+        </NuxtLink>
       </nav>
 
       <div class="flex flex-1 items-center justify-end gap-4">
@@ -118,7 +126,7 @@ const languageItems = computed(() => [
   [
     {
       label: "English",
-      icon: "i-lucide-globe",
+      icon: "i-circle-flags-en",
       onSelect: () => {
         console.log("Switching to English");
         setLocale("en");
@@ -126,7 +134,7 @@ const languageItems = computed(() => [
     },
     {
       label: "Türkçe",
-      icon: "i-lucide-globe",
+      icon: "i-circle-flags-tr",
       onSelect: () => {
         console.log("Switching to Turkish");
         setLocale("tr");
@@ -134,10 +142,10 @@ const languageItems = computed(() => [
     },
     {
       label: "Deutsch",
-      icon: "i-lucide-globe",
+      icon: "i-circle-flags-de",
       onSelect: () => {
         console.log("Switching to German");
-        setLocale("ger");
+        setLocale("de");
       },
     },
   ],
