@@ -6,8 +6,8 @@
     <div
       class="flex flex-col items-center justify-center max-w-3xl text-center gap-10 py-20 px-4 sm:px-6 lg:px-8"
     >
-      <h1 class="text-7xl font-bold text-black dark:text-primary-text">
-        {{ $t("hero.title") }}
+      <h1 class="text-black dark:text-primary-text">
+        Design Your Gym with
         <span
           class="bg-gradient-to-b from-gradient-start to-gradient-end text-transparent bg-clip-text"
           >{{ $t("hero.titleHighlight") }}</span
