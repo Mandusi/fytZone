@@ -7,17 +7,17 @@
       class="flex flex-col p-2 md:p-0 gap-4 w-full max-w-4xl mt-8"
       @submit.prevent="handleSubmit"
     >
-      <h2 class="text-black dark:text-primary-text">Contact</h2>
+      <h2 class="text-black dark:text-primary-text">
+        {{ $t("contact.title") }}
+      </h2>
       <p class="mt-4 text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-        veritatis? At, minima impedit explicabo cumque molestiae reiciendis
-        repellat?
+        {{ $t("contact.description") }}
       </p>
       <UInput
         v-model="email"
         color="secondary"
         icon="i-lucide-at-sign"
-        placeholder="Enter your email"
+        :placeholder="$t('contact.emailPlaceholder')"
         size="md"
       />
 
@@ -25,7 +25,7 @@
         v-model="message"
         color="secondary"
         :rows="7"
-        placeholder="Type something..."
+        :placeholder="$t('contact.messagePlaceholder')"
         class="variant-outline"
       />
       <div class="flex justify-end">
@@ -34,7 +34,7 @@
           type="submit"
           class="px-16 py-2 text-white bg-button rounded-full"
         >
-          Send
+          {{ $t("contact.send") }}
         </UButton>
       </div>
     </form>

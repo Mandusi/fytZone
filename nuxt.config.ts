@@ -15,10 +15,24 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: "en", language: "English" },
-      { code: "tr", language: "Turkish" },
+      {
+        code: "en",
+        name: "English",
+        file: "en.json",
+      },
+      {
+        code: "tr",
+        name: "Turkish",
+        file: "tr.json",
+      },
+      {
+        code: "de",
+        name: "German",
+        file: "de.json",
+      },
     ],
     defaultLocale: "en",
+    strategy: "no_prefix",
   },
 
   colorMode: {

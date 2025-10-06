@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "tryNow": "Try Now"
+  },
+  "hero": {
+    "title": "Design Your Gym with",
+    "titleHighlight": "AI",
+    "description": "Transform your fitness space with our AI-powered gym design tool. Create the perfect workout environment tailored to your needs and preferences.",
+    "cta": "Try Now"
+  },
+  "about": {
+    "title": "About",
+    "description": "FytZone revolutionizes gym design through cutting-edge artificial intelligence. We help fitness enthusiasts and gym owners create optimal workout spaces that maximize efficiency, safety, and motivation.",
+    "features": {
+      "equipment": "Smart equipment placement and spacing optimization for maximum safety and efficiency.",
+      "activity": "Personalized layout recommendations based on your fitness goals and available space.",
+      "health": "Health-focused design principles that promote better workouts and faster recovery."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Ready to transform your fitness space? Get in touch with us to learn more about our AI-powered gym design solutions.",
+    "emailPlaceholder": "Enter your email",
+    "messagePlaceholder": "Type something...",
+    "send": "Send"
+  },
+  "common": {
+    "language": "Language"
+  }
+}
