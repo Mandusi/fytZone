@@ -25,9 +25,9 @@
         color="secondary"
         variant="solid"
         class="px-10 py-2 text-white bg-button rounded-full"
-        >{{ $t("hero.cta") }}</UButton
         @click="$router.push('/demo')"
-        >Try Now</UButton
+      >
+        {{ $t("hero.cta") }}</UButton
       >
     </div>
   </div>
