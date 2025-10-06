@@ -27,6 +27,81 @@
     "messagePlaceholder": "Bir şeyler yazın...",
     "send": "Gönder"
   },
+  "pricing": {
+    "title": "Herkes İçin",
+    "titleHighlight": "Basit Fiyatlar",
+    "description": "Spor salonu tasarım ihtiyaçlarınız için mükemmel planı seçin. Ücretsiz başlayın ve büyüdükçe yükseltin.",
+    "popular": "En Popüler",
+    "free": "Ücretsiz",
+    "month": "ay",
+    "getStarted": "Başlayın",
+    "choosePlan": "Plan Seç",
+    "plans": {
+      "starter": {
+        "name": "Başlangıç",
+        "description": "Kişisel kullanım ve küçük alanlar için mükemmel"
+      },
+      "professional": {
+        "name": "Profesyonel",
+        "description": "Fitness profesyonelleri ve küçük spor salonları için ideal"
+      },
+      "enterprise": {
+        "name": "Kurumsal",
+        "description": "Büyük spor salonları ve fitness zincirleri için"
+      }
+    },
+    "features": {
+      "basic": {
+        "design": "Ayda 3 spor salonu tasarımına kadar",
+        "layouts": "Temel düzen şablonları",
+        "support": "Topluluk desteği",
+        "exports": "Standart dışa aktarımlar (PDF, PNG)"
+      },
+      "pro": {
+        "unlimited": "Sınırsız spor salonu tasarımları",
+        "advanced": "Gelişmiş AI önerileri",
+        "templates": "Premium düzen şablonları",
+        "priority": "Öncelikli e-posta desteği",
+        "analytics": "Alan kullanım analitiği",
+        "export": "Yüksek çözünürlük dışa aktarım ve 3D render"
+      },
+      "enterprise": {
+        "everything": "Profesyoneldeki her şey",
+        "custom": "Özel marka ve şablonlar",
+        "dedicated": "Özel hesap yöneticisi",
+        "onboarding": "Kapsamlı başlangıç eğitimi",
+        "sla": "%99,9 uptime SLA",
+        "api": "API erişimi ve entegrasyonlar"
+      }
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "FytZone fiyatlandırması hakkında bilmeniz gereken her şey",
+      "questions": {
+        "q1": {
+          "question": "Planımı istediğim zaman değiştirebilir miyim?",
+          "answer": "Evet, planınızı istediğiniz zaman yükseltebilir veya düşürebilirsiniz. Değişiklikler hemen geçerli olur ve ücretleri orantılı olarak hesaplarız."
+        },
+        "q2": {
+          "question": "Ücretli planlar için ücretsiz deneme var mı?",
+          "answer": "Evet! Tüm ücretli planlar 14 günlük ücretsiz deneme ile gelir. Başlamak için kredi kartı gerekmez."
+        },
+        "q3": {
+          "question": "Plan limitlerimi aşarsam ne olur?",
+          "answer": "Limitlere yaklaştığınızda sizi bilgilendiririz. Planınızı yükseltebilir veya bir sonraki faturalama döngüsünü bekleyebilirsiniz."
+        },
+        "q4": {
+          "question": "Yıllık faturalandırma için indirim sunuyor musunuz?",
+          "answer": "Evet, yıllık ödeme yaptığınızda 2 ay ücretsiz sunuyoruz. Özel kurumsal fiyatlandırma için bizimle iletişime geçin."
+        }
+      }
+    },
+    "cta": {
+      "title": "Mükemmel Spor Salonunuzu Tasarlamaya Hazır mısınız?",
+      "description": "Harika antrenman alanları oluşturmak için FytZone kullanan binlerce fitness profesyoneline katılın.",
+      "button": "Satış Ekibiyle İletişime Geç"
+    }
+  },
   "common": {
     "language": "Dil"
   }

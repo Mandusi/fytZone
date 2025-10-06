@@ -22,7 +22,7 @@
       </div>
 
       <nav
-        class="flex-1 gap-6 justify-center items-center hidden md:flex font-medium"
+        class="flex-1 gap-6 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
       >
         <NuxtLink
           to="/#home"
@@ -54,9 +54,17 @@
         >
           Blogs
         </NuxtLink>
+        <NuxtLink
+          to="/pricing"
+          class="transition-colors hover:text-accent-blue"
+          active-class="text-accent-blue"
+          :class="{ 'text-text-primary': true }"
+        >
+          Pricing
+        </NuxtLink>
       </nav>
 
-      <div class="flex flex-1 items-center justify-end gap-4">
+      <div class="flex flex-1 items-center justify-end">
         <div
           class="rounded-full cursor-pointer h-8 w-8 flex justify-center items-center transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="Toggle color mode"
@@ -77,6 +85,9 @@
         <UDropdownMenu
           :items="languageItems"
           :popper="{ placement: 'bottom-end' }"
+          :ui="{
+            content: 'min-w-0',
+          }"
         >
           <UButton
             color="neutral"
@@ -92,7 +103,7 @@
         >
           <NuxtLink
             to="/demo"
-            class="font-medium transition-colors hover:gradient-text"
+            class="font-medium transition-colors hover:gradient-text whitespace-nowrap flex items-center gap-1"
             :class="{
               'border-gray-300 dark:border-gray-700 text-text-primary': true,
             }"
@@ -125,7 +136,6 @@ const currentLocale = computed(() => locale.value);
 const languageItems = computed(() => [
   [
     {
-      label: "English",
       icon: "i-circle-flags-en",
       onSelect: () => {
         console.log("Switching to English");
@@ -133,7 +143,6 @@ const languageItems = computed(() => [
       },
     },
     {
-      label: "Türkçe",
       icon: "i-circle-flags-tr",
       onSelect: () => {
         console.log("Switching to Turkish");
@@ -141,7 +150,6 @@ const languageItems = computed(() => [
       },
     },
     {
-      label: "Deutsch",
       icon: "i-circle-flags-de",
       onSelect: () => {
         console.log("Switching to German");

@@ -27,6 +27,81 @@
     "messagePlaceholder": "Schreiben Sie etwas...",
     "send": "Senden"
   },
+  "pricing": {
+    "title": "Einfache Preise für",
+    "titleHighlight": "Alle",
+    "description": "Wählen Sie den perfekten Plan für Ihre Fitnessstudio-Design-Bedürfnisse. Starten Sie kostenlos und upgraden Sie, während Sie wachsen.",
+    "popular": "Beliebteste",
+    "free": "Kostenlos",
+    "month": "Monat",
+    "getStarted": "Loslegen",
+    "choosePlan": "Plan wählen",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfekt für den persönlichen Gebrauch und kleine Räume"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Ideal für Fitness-Profis und kleine Fitnessstudios"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Für große Fitnessstudios und Fitness-Ketten"
+      }
+    },
+    "features": {
+      "basic": {
+        "design": "Bis zu 3 Fitnessstudio-Designs pro Monat",
+        "layouts": "Basis-Layout-Vorlagen",
+        "support": "Community-Support",
+        "exports": "Standard-Exporte (PDF, PNG)"
+      },
+      "pro": {
+        "unlimited": "Unbegrenzte Fitnessstudio-Designs",
+        "advanced": "Erweiterte KI-Empfehlungen",
+        "templates": "Premium-Layout-Vorlagen",
+        "priority": "Prioritätssupport per E-Mail",
+        "analytics": "Raumnutzungs-Analysen",
+        "export": "Hochauflösende Exporte & 3D-Renderings"
+      },
+      "enterprise": {
+        "everything": "Alles aus Professional",
+        "custom": "Custom Branding & Vorlagen",
+        "dedicated": "Dedicated Account Manager",
+        "onboarding": "White-Glove Onboarding",
+        "sla": "99,9% Uptime SLA",
+        "api": "API-Zugang & Integrationen"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über FytZone-Preise wissen müssen",
+      "questions": {
+        "q1": {
+          "question": "Kann ich meinen Plan jederzeit ändern?",
+          "answer": "Ja, Sie können Ihren Plan jederzeit upgraden oder downgraden. Änderungen werden sofort wirksam und wir rechnen alle Gebühren anteilig ab."
+        },
+        "q2": {
+          "question": "Gibt es eine kostenlose Testversion für kostenpflichtige Pläne?",
+          "answer": "Ja! Alle kostenpflichtigen Pläne werden mit einer 14-tägigen kostenlosen Testversion geliefert. Keine Kreditkarte erforderlich."
+        },
+        "q3": {
+          "question": "Was passiert, wenn ich meine Plan-Limits überschreite?",
+          "answer": "Wir benachrichtigen Sie, wenn Sie sich Ihren Limits nähern. Sie können Ihren Plan upgraden oder bis zum nächsten Abrechnungszyklus warten."
+        },
+        "q4": {
+          "question": "Bieten Sie Rabatte für jährliche Abrechnung an?",
+          "answer": "Ja, wir bieten 2 Monate kostenlos, wenn Sie jährlich zahlen. Kontaktieren Sie uns für individuelle Enterprise-Preise."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr perfektes Fitnessstudio zu gestalten?",
+      "description": "Schließen Sie sich Tausenden von Fitness-Profis an, die FytZone nutzen, um fantastische Trainingsbereiche zu schaffen.",
+      "button": "Vertrieb kontaktieren"
+    }
+  },
   "common": {
     "language": "Sprache"
   }
