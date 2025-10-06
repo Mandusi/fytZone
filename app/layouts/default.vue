@@ -9,5 +9,6 @@ import NavBar from "~/components/NavBar.vue";
     <div class="min-h-screen w-full">
       <slot />
     </div>
+    <AppFooter />
   </div>
 </template>

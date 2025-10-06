@@ -1,5 +1,8 @@
 <template>
-  <div id="contact" class="flex w-full h-screen justify-center items-center">
+  <div
+    id="contact"
+    class="flex w-full h-[calc(100vh-127px)] justify-center items-center"
+  >
     <form
       class="flex flex-col p-2 md:p-0 gap-4 w-full max-w-4xl mt-8"
       @submit.prevent="handleSubmit"
