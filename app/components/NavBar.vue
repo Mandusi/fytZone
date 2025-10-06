@@ -68,7 +68,7 @@
           class="flex items-center gap-2 border px-3 py-1 rounded-full hover:shadow-md transition-shadow duration-200"
         >
           <NuxtLink
-            to="/plans"
+            to="/demo"
             class="font-medium transition-colors hover:gradient-text"
             :class="{
               'border-gray-300 dark:border-gray-700 text-text-primary': true,

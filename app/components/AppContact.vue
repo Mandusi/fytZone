@@ -4,9 +4,7 @@
       class="flex flex-col p-2 md:p-0 gap-4 w-full max-w-4xl mt-8"
       @submit.prevent="handleSubmit"
     >
-      <h2 class="text-4xl font-bold text-black dark:text-primary-text">
-        Contact
-      </h2>
+      <h2 class="text-black dark:text-primary-text">Contact</h2>
       <p class="mt-4 text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
         veritatis? At, minima impedit explicabo cumque molestiae reiciendis

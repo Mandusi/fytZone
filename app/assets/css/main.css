@@ -53,3 +53,17 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
