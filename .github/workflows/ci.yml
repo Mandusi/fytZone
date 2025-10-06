@@ -1,0 +1,27 @@
+# .github/workflows/ci.yml
+name: Node CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repo
+      - uses: actions/checkout@v3
+
+      # 2. Setup Node.js and pnpm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      # 3. Install dependencies using pnpm
+      - run: pnpm install
+
+      # 4. Build the project
+      - run: pnpm build
