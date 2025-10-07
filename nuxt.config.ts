@@ -1,3 +1,6 @@
+import envprod from "./env.prod";
+import envdev from "./env.dev";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -48,5 +51,14 @@ export default defineNuxtConfig({
         dir: "./app/assets/icons",
       },
     ],
+  },
+
+  runtimeConfig: {
+    public:
+      process.env.NODE_ENV === "development" ? { ...envdev } : { ...envprod },
+  },
+
+  devServer: {
+    port: 4000,
   },
 });
