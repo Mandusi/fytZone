@@ -185,10 +185,10 @@
                   item.category === 'mat'
                     ? 'square'
                     : item.category === 'dumbbell'
-                    ? 'dumbbell'
-                    : item.category === 'mirror'
-                    ? 'mirror'
-                    : 'zap'
+                      ? 'dumbbell'
+                      : item.category === 'mirror'
+                        ? 'mirror'
+                        : 'zap'
                 }`"
                 size="48"
                 class="text-gray-400"
