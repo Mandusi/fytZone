@@ -32,10 +32,56 @@
     "titleHighlight": "Alle",
     "description": "Wählen Sie den perfekten Plan für Ihre Fitnessstudio-Design-Bedürfnisse. Starten Sie kostenlos und upgraden Sie, während Sie wachsen.",
     "popular": "Beliebteste",
+    "recommended": "Empfohlen",
     "free": "Kostenlos",
     "month": "Monat",
+    "year": "Jahr",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "save20": "20% sparen",
+    "save": "Sparen",
+    "onetime": "einmalig",
     "getStarted": "Loslegen",
     "choosePlan": "Plan wählen",
+    "buyNow": "Jetzt kaufen",
+    "subscriptions": {
+      "title": "Abonnement-Pläne"
+    },
+    "premium": {
+      "title": "Einmalige Premium-Pakete",
+      "subtitle": "Einmal zahlen, für immer besitzen. Perfekt für Profis, die lebenslangen Zugang wollen.",
+      "complete": {
+        "name": "Vollständiges Paket",
+        "description": "Alles was Sie für professionelles Fitnessstudio-Design brauchen"
+      },
+      "pro": {
+        "name": "Pro Paket",
+        "description": "Wichtige Tools für ernsthafte Fitnessstudio-Designer"
+      }
+    },
+    "equipment": {
+      "title": "Empfohlene Ausrüstung",
+      "subtitle": "Kuratierte Ausrüstung von unseren vertrauenswürdigen Partnern zur Vervollständigung Ihres Fitnessstudio-Setups.",
+      "partner": "Partner",
+      "viewProduct": "Produkt ansehen",
+      "disclaimer": "FytZone kann Provisionen von Partner-Käufen erhalten. Preise können sich ändern.",
+      "yoga": {
+        "name": "Premium Yoga-Matte",
+        "description": "Rutschfeste, umweltfreundliche Yoga-Matte perfekt für Heimtrainings"
+      },
+      "dumbbells": {
+        "name": "Verstellbares Hantel-Set",
+        "description": "Platzsparende verstellbare Hanteln von 2,5-22,5 kg"
+      },
+      "mirror": {
+        "name": "Smart Fitness-Spiegel",
+        "description": "Interaktiver Heim-Fitnessstudio-Spiegel mit Live- und On-Demand-Kursen"
+      },
+      "trx": {
+        "name": "TRX Suspension Trainer",
+        "description": "Professioneller Suspension Trainer für Ganzkörper-Workouts"
+      }
+    },
     "plans": {
       "starter": {
         "name": "Starter",
@@ -72,6 +118,17 @@
         "onboarding": "White-Glove Onboarding",
         "sla": "99,9% Uptime SLA",
         "api": "API-Zugang & Integrationen"
+      },
+      "premium": {
+        "lifetime": "Lebenslanger Zugang zu allen Funktionen",
+        "designs": "Unbegrenzte Fitnessstudio-Designs",
+        "consultation": "1-stündige persönliche Beratung",
+        "templates": "Exklusive Premium-Vorlagen",
+        "support": "Prioritätssupport für 1 Jahr",
+        "basic": "Lebenslanger Zugang zu Kernfunktionen",
+        "limited": "Bis zu 50 Fitnessstudio-Designs",
+        "email": "E-Mail-Support für 6 Monate",
+        "standard": "Standard-Vorlagenbibliothek"
       }
     },
     "faq": {

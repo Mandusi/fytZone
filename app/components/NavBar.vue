@@ -64,7 +64,7 @@
         </NuxtLink>
       </nav>
 
-      <div class="flex flex-1 items-center justify-end">
+      <div class="flex flex-1 items-center gap-2 justify-end">
         <div
           class="rounded-full cursor-pointer h-8 w-8 flex justify-center items-center transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="Toggle color mode"
@@ -92,7 +92,7 @@
           <UButton
             color="neutral"
             variant="ghost"
-            :label="currentLocale.toUpperCase()"
+            :icon="currentLocaleFlag"
             trailing-icon="i-lucide-chevron-down"
             size="sm"
           />
@@ -131,7 +131,7 @@ const iconName = computed(() => {
     : "i-lucide-sun-medium"; // Light mode shows Sun icon
 });
 
-const currentLocale = computed(() => locale.value);
+const currentLocaleFlag = computed(() => `i-circle-flags-${locale.value}`);
 
 const languageItems = computed(() => [
   [
