@@ -1,6 +1,8 @@
 <template>
   <div class="w-full flex justify-center items-start p-3 md:p-0">
-    <div class="max-w-4xl w-full p-2 md:p-0 md:py-12 flex flex-col gap-6">
+    <div
+      class="max-w-4xl w-full pt-28 md:p-0 md:pt-28 md:py-12 flex flex-col gap-6"
+    >
       <div
         class="flex flex-col md:flex-row justify-center gap-4 items-center md:justify-between md:items-end"
       >

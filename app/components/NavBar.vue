@@ -72,7 +72,7 @@
         >
           <UIcon
             :name="iconName"
-            :size="20"
+            :size="iconName === 'i-lucide-moon' ? 20 : 24"
             class="transition-colors duration-200"
             :class="{
               'text-yellow-500': colorMode.value === 'light', // Yellow sun
