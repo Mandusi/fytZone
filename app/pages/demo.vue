@@ -58,7 +58,7 @@ function handleFileUploaded(imageBuffer: ArrayBuffer) {
   const formData = new FormData();
   formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
 
-  fetch("http://localhost:3030/api/v1/image-generation", {
+  fetch(`${useRuntimeConfig().public.API}/image-generation`, {
     method: "POST",
     body: formData,
   })
