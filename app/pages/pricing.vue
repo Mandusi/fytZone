@@ -161,7 +161,7 @@
 
     <!-- Equipment Recommendations -->
     <div class="w-full py-20 flex items-center justify-center">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-3">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {{ $t("pricing.equipment.title") }}
@@ -175,7 +175,7 @@
           <div
             v-for="item in equipment"
             :key="item.name"
-            class="bg-white dark:bg-gray-800 h-full rounded-xl p-6 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:scale-105 flex flex-col justify-between"
+            class="dark:bg-secondary-bg bg-white h-full rounded-xl p-6 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:scale-105 flex flex-col justify-between"
           >
             <div
               class="aspect-square bg-gray-100 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center"
@@ -195,9 +195,9 @@
               />
             </div>
 
-            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+            <p class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               {{ $t(`pricing.${item.name}`) }}
-            </h3>
+            </p>
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
               {{ $t(`pricing.${item.description}`) }}
             </p>
