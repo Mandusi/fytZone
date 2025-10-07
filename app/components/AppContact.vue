@@ -3,9 +3,11 @@
     id="contact"
     class="flex w-full h-[calc(100vh-127px)] justify-center items-center"
   >
-    <form
+    <UForm
+      :schema="schema"
+      :state="state"
       class="flex flex-col p-2 md:p-0 gap-4 w-full max-w-4xl mt-8"
-      @submit.prevent="handleSubmit"
+      @submit="onSubmit"
     >
       <h2 class="text-black dark:text-primary-text">
         {{ $t("contact.title") }}
@@ -13,21 +15,27 @@
       <p class="mt-4 text-lg">
         {{ $t("contact.description") }}
       </p>
-      <UInput
-        v-model="email"
-        color="secondary"
-        icon="i-lucide-at-sign"
-        :placeholder="$t('contact.emailPlaceholder')"
-        size="md"
-      />
 
-      <UTextarea
-        v-model="message"
-        color="secondary"
-        :rows="7"
-        :placeholder="$t('contact.messagePlaceholder')"
-        class="variant-outline"
-      />
+      <UFormField class="w-full" name="email">
+        <UInput
+          v-model="state.email"
+          color="secondary"
+          icon="i-lucide-at-sign"
+          :placeholder="$t('contact.emailPlaceholder')"
+          class="variant-outline w-full"
+        />
+      </UFormField>
+
+      <UFormField class="w-full" name="message">
+        <UTextarea
+          v-model="state.message"
+          color="secondary"
+          :rows="7"
+          :placeholder="$t('contact.messagePlaceholder')"
+          class="variant-outline w-full"
+        />
+      </UFormField>
+
       <div class="flex justify-end">
         <UButton
           color="secondary"
@@ -37,16 +45,53 @@
           {{ $t("contact.send") }}
         </UButton>
       </div>
-    </form>
+    </UForm>
   </div>
 </template>
 
 <script setup lang="ts">
-const email = ref("");
-const message = ref("");
+import * as v from "valibot";
+import type { FormSubmitEvent } from "@nuxt/ui";
 
-const handleSubmit = () => {
-  console.log("Email:", email.value);
-  console.log("Message:", message.value);
-};
+const schema = v.object({
+  email: v.pipe(v.string(), v.email("Invalid email")),
+  message: v.pipe(v.string(), v.minLength(8, "Must be at least 8 characters")),
+});
+
+type Schema = v.InferOutput<typeof schema>;
+
+const state = reactive({
+  email: "",
+  message: "",
+});
+
+const toast = useToast();
+
+async function onSubmit(event: FormSubmitEvent<Schema>) {
+  useFetch(`${useRuntimeConfig().public.API}/contact`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: event.data,
+    onResponse({ response }) {
+      if (response.status === 200) {
+        toast.add({
+          title: "Success",
+          description: "Your message has been sent successfully.",
+          color: "secondary",
+        });
+      } else {
+        toast.add({
+          title: "Error",
+          description: "There was an error sending your message.",
+          color: "error",
+        });
+      }
+    },
+  });
+
+  state.email = "";
+  state.message = "";
+}
 </script>
