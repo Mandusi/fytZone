@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-32 flex flex-col justify-center items-center border-t border-gray-300 dark:border-gray-700"
+    class="w-full h-32 flex flex-col justify-center items-center border-t border-gray-300 dark:border-gray-700 p-3"
   >
     <div
       class="flex flex-col max-w-4xl w-full h-full justify-center items-center gap-4"
@@ -52,7 +52,7 @@
         </div>
       </div>
       <div>
-        <p class="text-muted-text">
+        <p class="text-muted-text max-sm:text-sm text-center">
           Copyright © 2025 FytZone. All rights reserved.
         </p>
       </div>

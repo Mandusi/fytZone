@@ -62,15 +62,24 @@ function handleFileUploaded(imageBuffer: ArrayBuffer) {
     method: "POST",
     body: formData,
   })
-    .then((response) => response.blob())
-    .then((blob) => {
-      const contentType = blob.type || "image/png";
-      imageNames.value.dark.after = URL.createObjectURL(
-        new Blob([blob], { type: contentType })
-      );
-      imageNames.value.light.after = URL.createObjectURL(
-        new Blob([blob], { type: contentType })
-      );
+    .then(async (response) => {
+      const res = await response.json();
+      console.log("API Response:", res);
+
+      if (res.success && res.data && res.data.data) {
+        const imageData = new Uint8Array(res.data.data);
+
+        const blob = new Blob([imageData], { type: "image/png" });
+
+        const imageUrl = URL.createObjectURL(blob);
+        imageNames.value.dark.after = imageUrl;
+        imageNames.value.light.after = imageUrl;
+      } else {
+        console.error("Invalid response format:", res);
+      }
+    })
+    .catch((error) => {
+      console.error("Error generating image:", error);
     });
 }
 

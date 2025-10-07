@@ -32,10 +32,56 @@
     "titleHighlight": "Everyone",
     "description": "Choose the perfect plan for your gym design needs. Start free and upgrade as you grow.",
     "popular": "Most Popular",
+    "recommended": "Recommended",
     "free": "Free",
     "month": "month",
+    "year": "year",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save20": "Save 20%",
+    "save": "Save",
+    "onetime": "one-time",
     "getStarted": "Get Started",
     "choosePlan": "Choose Plan",
+    "buyNow": "Buy Now",
+    "subscriptions": {
+      "title": "Subscription Plans"
+    },
+    "premium": {
+      "title": "One-Time Premium Packages",
+      "subtitle": "Pay once, own forever. Perfect for professionals who want lifetime access.",
+      "complete": {
+        "name": "Complete Package",
+        "description": "Everything you need for professional gym design"
+      },
+      "pro": {
+        "name": "Pro Package",
+        "description": "Essential tools for serious gym designers"
+      }
+    },
+    "equipment": {
+      "title": "Recommended Equipment",
+      "subtitle": "Curated equipment from our trusted partners to complete your gym setup.",
+      "partner": "Partner",
+      "viewProduct": "View Product",
+      "disclaimer": "FytZone may earn commission from partner purchases. Prices subject to change.",
+      "yoga": {
+        "name": "Premium Yoga Mat",
+        "description": "Non-slip, eco-friendly yoga mat perfect for home workouts"
+      },
+      "dumbbells": {
+        "name": "Adjustable Dumbbells Set",
+        "description": "Space-saving adjustable dumbbells from 5-50 lbs"
+      },
+      "mirror": {
+        "name": "Smart Fitness Mirror",
+        "description": "Interactive home gym mirror with live and on-demand classes"
+      },
+      "trx": {
+        "name": "TRX Suspension Trainer",
+        "description": "Professional-grade suspension trainer for full-body workouts"
+      }
+    },
     "plans": {
       "starter": {
         "name": "Starter",
@@ -72,6 +118,17 @@
         "onboarding": "White-glove onboarding",
         "sla": "99.9% uptime SLA",
         "api": "API access & integrations"
+      },
+      "premium": {
+        "lifetime": "Lifetime access to all features",
+        "designs": "Unlimited gym designs",
+        "consultation": "1-hour personal consultation",
+        "templates": "Exclusive premium templates",
+        "support": "Priority support for 1 year",
+        "basic": "Lifetime access to core features",
+        "limited": "Up to 50 gym designs",
+        "email": "Email support for 6 months",
+        "standard": "Standard template library"
       }
     },
     "faq": {

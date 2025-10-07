@@ -4,7 +4,7 @@ import NavBar from "~/components/NavBar.vue";
 
 <template>
   <!-- Centered container with max width and min height of screen -->
-  <div class="min-h-screen flex flex-col w-screen justify-center items-center">
+  <div class="min-h-screen flex flex-col justify-center items-center">
     <NavBar />
     <div class="min-h-screen w-full">
       <slot />

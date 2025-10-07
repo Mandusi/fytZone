@@ -32,10 +32,56 @@
     "titleHighlight": "Basit Fiyatlar",
     "description": "Spor salonu tasarım ihtiyaçlarınız için mükemmel planı seçin. Ücretsiz başlayın ve büyüdükçe yükseltin.",
     "popular": "En Popüler",
+    "recommended": "Önerilen",
     "free": "Ücretsiz",
     "month": "ay",
+    "year": "yıl",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "save20": "%20 tasarruf",
+    "save": "Tasarruf",
+    "onetime": "tek seferlik",
     "getStarted": "Başlayın",
     "choosePlan": "Plan Seç",
+    "buyNow": "Şimdi Satın Al",
+    "subscriptions": {
+      "title": "Abonelik Planları"
+    },
+    "premium": {
+      "title": "Tek Seferlik Premium Paketler",
+      "subtitle": "Bir kez ödeyin, sonsuza kadar sahip olun. Yaşam boyu erişim isteyen profesyoneller için mükemmel.",
+      "complete": {
+        "name": "Komple Paket",
+        "description": "Profesyonel spor salonu tasarımı için ihtiyacınız olan her şey"
+      },
+      "pro": {
+        "name": "Pro Paket",
+        "description": "Ciddi spor salonu tasarımcıları için temel araçlar"
+      }
+    },
+    "equipment": {
+      "title": "Önerilen Ekipmanlar",
+      "subtitle": "Spor salonu kurulumunuzu tamamlamak için güvenilir ortaklarımızdan seçilmiş ekipmanlar.",
+      "partner": "Ortak",
+      "viewProduct": "Ürünü Görüntüle",
+      "disclaimer": "FytZone ortak satışlarından komisyon kazanabilir. Fiyatlar değişebilir.",
+      "yoga": {
+        "name": "Premium Yoga Matı",
+        "description": "Ev antrenmanları için mükemmel kaymaz, çevre dostu yoga matı"
+      },
+      "dumbbells": {
+        "name": "Ayarlanabilir Dumbbell Seti",
+        "description": "2,5-22,5 kg arası yer tasarrufu sağlayan ayarlanabilir dumbbelllar"
+      },
+      "mirror": {
+        "name": "Akıllı Fitness Aynası",
+        "description": "Canlı ve isteğe bağlı derslerle interaktif ev spor salonu aynası"
+      },
+      "trx": {
+        "name": "TRX Suspension Trainer",
+        "description": "Tüm vücut antrenmanları için profesyonel sınıf suspension trainer"
+      }
+    },
     "plans": {
       "starter": {
         "name": "Başlangıç",
@@ -72,6 +118,17 @@
         "onboarding": "Kapsamlı başlangıç eğitimi",
         "sla": "%99,9 uptime SLA",
         "api": "API erişimi ve entegrasyonlar"
+      },
+      "premium": {
+        "lifetime": "Tüm özelliklere yaşam boyu erişim",
+        "designs": "Sınırsız spor salonu tasarımları",
+        "consultation": "1 saatlik kişisel danışmanlık",
+        "templates": "Özel premium şablonlar",
+        "support": "1 yıl öncelikli destek",
+        "basic": "Temel özelliklere yaşam boyu erişim",
+        "limited": "50 spor salonu tasarımına kadar",
+        "email": "6 ay e-posta desteği",
+        "standard": "Standart şablon kütüphanesi"
       }
     },
     "faq": {

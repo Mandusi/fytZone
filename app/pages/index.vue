@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div>
     <AppHero />
@@ -7,3 +5,9 @@
     <AppContact />
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "FytZone - AI Image Enhancement",
+});
+</script>
