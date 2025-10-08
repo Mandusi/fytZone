@@ -1,18 +1,20 @@
 <template>
   <div class="w-full flex justify-center items-start p-3 md:p-0">
-    <div
-      class="max-w-4xl w-full pt-28 md:p-0 md:pt-28 md:py-12 flex flex-col gap-6"
-    >
+    <div class="max-w-4xl w-full md:p-0 md:py-12 flex flex-col gap-6">
       <div
         class="flex flex-col md:flex-row justify-center gap-4 items-center md:justify-between md:items-end"
       >
         <div class="text-center md:text-left">
           <h3 class="text-black dark:text-primary-text">Build your DIY Gym</h3>
-          <p>Simply upload an image and let FytZone AI design your Gym</p>
+          <p>
+            Specify your desired working area and simply upload an image and let
+            FytZone AI design your Gym
+          </p>
         </div>
-
-        <UploadImgButton class="w-full" @file-uploaded="handleFileUploaded" />
       </div>
+
+      <UploadImage />
+
       <div>
         <ImgComparisonSlider class="slider-example-focus rounded" tabindex="0">
           <!-- eslint-disable -->
@@ -50,40 +52,40 @@ import { ImgComparisonSlider } from "@img-comparison-slider/vue";
 //   },
 // };
 
-function handleFileUploaded(imageBuffer: ArrayBuffer) {
-  console.log("File uploaded:", imageBuffer);
+// function handleFileUploaded(imageBuffer: ArrayBuffer) {
+//   console.log("File uploaded:", imageBuffer);
 
-  imageNames.value.dark.before = URL.createObjectURL(new Blob([imageBuffer]));
-  console.log(imageBuffer);
-  imageNames.value.light.before = URL.createObjectURL(new Blob([imageBuffer]));
+//   imageNames.value.dark.before = URL.createObjectURL(new Blob([imageBuffer]));
+//   console.log(imageBuffer);
+//   imageNames.value.light.before = URL.createObjectURL(new Blob([imageBuffer]));
 
-  const formData = new FormData();
-  formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
+//   const formData = new FormData();
+//   formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
 
-  fetch(`${useRuntimeConfig().public.API}/image-generation`, {
-    method: "POST",
-    body: formData,
-  })
-    .then(async (response) => {
-      const res = await response.json();
-      console.log("API Response:", res);
+//   fetch(`${useRuntimeConfig().public.API}/image-generation`, {
+//     method: "POST",
+//     body: formData,
+//   })
+//     .then(async (response) => {
+//       const res = await response.json();
+//       console.log("API Response:", res);
 
-      if (res.success && res.data && res.data.data) {
-        const imageData = new Uint8Array(res.data.data);
+//       if (res.success && res.data && res.data.data) {
+//         const imageData = new Uint8Array(res.data.data);
 
-        const blob = new Blob([imageData], { type: "image/png" });
+//         const blob = new Blob([imageData], { type: "image/png" });
 
-        const imageUrl = URL.createObjectURL(blob);
-        imageNames.value.dark.after = imageUrl;
-        imageNames.value.light.after = imageUrl;
-      } else {
-        console.error("Invalid response format:", res);
-      }
-    })
-    .catch((error) => {
-      console.error("Error generating image:", error);
-    });
-}
+//         const imageUrl = URL.createObjectURL(blob);
+//         imageNames.value.dark.after = imageUrl;
+//         imageNames.value.light.after = imageUrl;
+//       } else {
+//         console.error("Invalid response format:", res);
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error generating image:", error);
+//     });
+// }
 
 const colorMode = useColorMode();
 
