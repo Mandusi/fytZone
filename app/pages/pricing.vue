@@ -1,10 +1,10 @@
 <template>
-  <div class="min-h-screen flex justify-center items-center flex-col gap-10">
+  <div
+    class="min-h-screen flex justify-center items-center flex-col gap-10 pt-20"
+  >
     <!-- Hero Section -->
     <div class="flex w-full max-w-4xl pt-8 gap-5 justify-center items-center">
-      <div
-        class="flex flex-col items-center justify-center text-center gap-4 px-4 sm:px-6 lg:px-8"
-      >
+      <div class="flex flex-col items-center justify-center text-center gap-3">
         <h1 class="text-gray-900 dark:text-white">
           {{ $t("pricing.title") }}
           <span
@@ -161,7 +161,7 @@
 
     <!-- Equipment Recommendations -->
     <div class="w-full py-20 flex items-center justify-center">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-3">
+      <div class="max-w-4xl flex flex-col gap-3">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {{ $t("pricing.equipment.title") }}
@@ -185,10 +185,10 @@
                   item.category === 'mat'
                     ? 'square'
                     : item.category === 'dumbbell'
-                      ? 'dumbbell'
-                      : item.category === 'mirror'
-                        ? 'mirror'
-                        : 'zap'
+                    ? 'dumbbell'
+                    : item.category === 'mirror'
+                    ? 'mirror'
+                    : 'zap'
                 }`"
                 size="48"
                 class="text-gray-400"
@@ -241,7 +241,7 @@
 
     <!-- FAQ Section -->
     <div class="w-full py-20 flex items-center justify-center">
-      <div class="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl w-full">
         <div class="text-center mb-16">
           <h2 class="text-gray-900 dark:text-white mb-4">
             {{ $t("pricing.faq.title") }}
@@ -265,7 +265,7 @@
 
     <!-- Contact CTA Section -->
     <div class="w-full py-20 flex items-center justify-center">
-      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl text-center">
         <h2 class="text-gray-900 dark:text-white mb-4">
           {{ $t("pricing.cta.title") }}
         </h2>

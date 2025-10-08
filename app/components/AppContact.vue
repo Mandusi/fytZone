@@ -68,7 +68,7 @@ const state = reactive({
 const toast = useToast();
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  useFetch(`${useRuntimeConfig().public.API}/contact`, {
+  await useFetch(`${useRuntimeConfig().public.API}/contact`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
