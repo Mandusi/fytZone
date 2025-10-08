@@ -42,6 +42,14 @@
               Contact
             </NuxtLink>
           </nav>
+          <NuxtLink
+            to="/privacy"
+            class="transition-colors hover:text-accent-blue"
+            active-class="text-accent-blue"
+            :class="{ 'text-text-primary': true }"
+          >
+            {{ $t("nav.privacy") }}
+          </NuxtLink>
         </div>
         <div>
           <NuxtLink

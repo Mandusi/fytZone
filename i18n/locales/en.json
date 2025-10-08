@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
+    "privacy": "Privacy",
     "tryNow": "Try Now"
   },
   "hero": {
@@ -157,6 +158,93 @@
       "title": "Ready to Design Your Perfect Gym?",
       "description": "Join thousands of fitness professionals using FytZone to create amazing workout spaces.",
       "button": "Contact Sales"
+    }
+  },
+  "privacy": {
+    "title": "Privacy &",
+    "titleHighlight": "Security",
+    "description": "Your data privacy and security are our top priorities. Learn how we protect your information.",
+    "mainMessage": "Your photos are private & encrypted.",
+    "mainDescription": "We use advanced encryption and security measures to ensure your images and personal data remain completely private and secure.",
+    "technicalSecurity": {
+      "title": "Technical Security",
+      "content": "All images are encrypted using AES-256 encryption before upload and remain encrypted during processing.\n\nYour data is stored in SOC 2 Type II certified data centers with multiple layers of security.\n\nAll data transmission uses TLS 1.3 encryption to protect against interception.\n\nOur systems are designed so that only you can access your unencrypted data.",
+      "features": {
+        "encryption": {
+          "title": "End-to-End Encryption",
+          "description": "All images are encrypted using AES-256 encryption before upload and remain encrypted during processing."
+        },
+        "storage": {
+          "title": "Secure Cloud Storage",
+          "description": "Your data is stored in SOC 2 Type II certified data centers with multiple layers of security."
+        },
+        "transmission": {
+          "title": "Secure Transmission",
+          "description": "All data transmission uses TLS 1.3 encryption to protect against interception."
+        },
+        "access": {
+          "title": "Zero-Knowledge Access",
+          "description": "Our systems are designed so that only you can access your unencrypted data."
+        }
+      }
+    },
+    "compliance": {
+      "title": "GDPR & KVKK Compliance",
+      "content": "Right to Access: You can request a copy of all personal data we hold about you.\n\nRight to Rectification: You can request correction of any inaccurate personal data.\n\nRight to Erasure: You can request deletion of your personal data at any time.\n\nData Portability: You can request your data in a structured, machine-readable format.\n\nRight to Restrict Processing: You can request limitation of how we process your data.\n\nRight to Object: You can object to processing of your personal data for specific purposes.",
+      "rights": {
+        "access": {
+          "title": "Right to Access",
+          "description": "You can request a copy of all personal data we hold about you."
+        },
+        "rectification": {
+          "title": "Right to Rectification",
+          "description": "You can request correction of any inaccurate personal data."
+        },
+        "erasure": {
+          "title": "Right to Erasure",
+          "description": "You can request deletion of your personal data at any time."
+        },
+        "portability": {
+          "title": "Data Portability",
+          "description": "You can request your data in a structured, machine-readable format."
+        },
+        "restriction": {
+          "title": "Right to Restrict Processing",
+          "description": "You can request limitation of how we process your data."
+        },
+        "objection": {
+          "title": "Right to Object",
+          "description": "You can object to processing of your personal data for specific purposes."
+        }
+      }
+    },
+    "dataProcessing": {
+      "title": "Data Processing Information",
+      "content": "What Data We Collect: We only collect images you upload for processing and basic account information necessary for service delivery.\n\nPurpose of Processing: Your data is processed solely for AI image enhancement services and improving our technology.\n\nData Retention: Processed images are automatically deleted after 30 days. You can delete them immediately after processing.\n\nData Sharing: We never share, sell, or distribute your personal data or images to third parties.",
+      "processes": {
+        "collection": {
+          "title": "What Data We Collect",
+          "description": "We only collect images you upload for processing and basic account information necessary for service delivery."
+        },
+        "purpose": {
+          "title": "Purpose of Processing",
+          "description": "Your data is processed solely for AI image enhancement services and improving our technology."
+        },
+        "retention": {
+          "title": "Data Retention",
+          "description": "Processed images are automatically deleted after 30 days. You can delete them immediately after processing."
+        },
+        "sharing": {
+          "title": "Data Sharing",
+          "description": "We never share, sell, or distribute your personal data or images to third parties."
+        }
+      }
+    },
+    "contact": {
+      "title": "Privacy Contact",
+      "description": "Have questions about privacy or want to exercise your rights? Contact our Data Protection Officer.",
+      "email": "Contact Privacy Team",
+      "contactForm": "Use Contact Form"
     }
   },
   "common": {

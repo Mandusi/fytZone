@@ -3,6 +3,7 @@
     "home": "Ana Sayfa",
     "about": "Hakkında",
     "contact": "İletişim",
+    "privacy": "Gizlilik",
     "tryNow": "Hemen Dene"
   },
   "hero": {
@@ -157,6 +158,93 @@
       "title": "Mükemmel Spor Salonunuzu Tasarlamaya Hazır mısınız?",
       "description": "Harika antrenman alanları oluşturmak için FytZone kullanan binlerce fitness profesyoneline katılın.",
       "button": "Satış Ekibiyle İletişime Geç"
+    }
+  },
+  "privacy": {
+    "title": "Gizlilik ve",
+    "titleHighlight": "Güvenlik",
+    "description": "Veri gizliliğiniz ve güvenliğiniz en önemli önceliklerimizdir. Bilgilerinizi nasıl koruduğumuzu öğrenin.",
+    "mainMessage": "Fotoğraflarınız özel ve şifrelenmiştir.",
+    "mainDescription": "Görsellerinizin ve kişisel verilerinizin tamamen özel ve güvenli kalmasını sağlamak için gelişmiş şifreleme ve güvenlik önlemleri kullanıyoruz.",
+    "technicalSecurity": {
+      "title": "Teknik Güvenlik",
+      "content": "Tüm görseller yüklemeden önce AES-256 şifreleme ile şifrelenir ve işleme sırasında şifreli kalır.\n\nVerileriniz SOC 2 Tip II sertifikalı veri merkezlerinde çoklu güvenlik katmanları ile saklanır.\n\nTüm veri iletimi engellemeye karşı koruma için TLS 1.3 şifreleme kullanır.\n\nSistemlerimiz yalnızca sizin şifrelenmemiş verilerinize erişebilmenizi sağlayacak şekilde tasarlanmıştır.",
+      "features": {
+        "encryption": {
+          "title": "Uçtan Uca Şifreleme",
+          "description": "Tüm görseller yüklemeden önce AES-256 şifreleme ile şifrelenir ve işleme sırasında şifreli kalır."
+        },
+        "storage": {
+          "title": "Güvenli Bulut Depolama",
+          "description": "Verileriniz SOC 2 Tip II sertifikalı veri merkezlerinde çoklu güvenlik katmanları ile saklanır."
+        },
+        "transmission": {
+          "title": "Güvenli İletim",
+          "description": "Tüm veri iletimi engellemeye karşı koruma için TLS 1.3 şifreleme kullanır."
+        },
+        "access": {
+          "title": "Sıfır-Bilgi Erişimi",
+          "description": "Sistemlerimiz yalnızca sizin şifrelenmemiş verilerinize erişebilmenizi sağlayacak şekilde tasarlanmıştır."
+        }
+      }
+    },
+    "compliance": {
+      "title": "GDPR ve KVKK Uyumluluğu",
+      "content": "Erişim Hakkı: Hakkınızda tuttuğumuz tüm kişisel verilerin bir kopyasını talep edebilirsiniz.\n\nDüzeltme Hakkı: Yanlış kişisel verilerin düzeltilmesini talep edebilirsiniz.\n\nSilme Hakkı: Kişisel verilerinizin istediğiniz zaman silinmesini talep edebilirsiniz.\n\nVeri Taşınabilirliği: Verilerinizi yapılandırılmış, makine tarafından okunabilir formatta talep edebilirsiniz.\n\nİşlemeyi Sınırlama Hakkı: Verilerinizi nasıl işlediğimizin sınırlandırılmasını talep edebilirsiniz.\n\nİtiraz Hakkı: Kişisel verilerinizin belirli amaçlar için işlenmesine itiraz edebilirsiniz.",
+      "rights": {
+        "access": {
+          "title": "Erişim Hakkı",
+          "description": "Hakkınızda tuttuğumuz tüm kişisel verilerin bir kopyasını talep edebilirsiniz."
+        },
+        "rectification": {
+          "title": "Düzeltme Hakkı",
+          "description": "Yanlış kişisel verilerin düzeltilmesini talep edebilirsiniz."
+        },
+        "erasure": {
+          "title": "Silme Hakkı",
+          "description": "Kişisel verilerinizin istediğiniz zaman silinmesini talep edebilirsiniz."
+        },
+        "portability": {
+          "title": "Veri Taşınabilirliği",
+          "description": "Verilerinizi yapılandırılmış, makine tarafından okunabilir formatta talep edebilirsiniz."
+        },
+        "restriction": {
+          "title": "İşlemeyi Sınırlama Hakkı",
+          "description": "Verilerinizi nasıl işlediğimizin sınırlandırılmasını talep edebilirsiniz."
+        },
+        "objection": {
+          "title": "İtiraz Hakkı",
+          "description": "Kişisel verilerinizin belirli amaçlar için işlenmesine itiraz edebilirsiniz."
+        }
+      }
+    },
+    "dataProcessing": {
+      "title": "Veri İşleme Bilgileri",
+      "content": "Hangi Verileri Topluyoruz: Yalnızca işleme için yüklediğiniz görselleri ve hizmet sunumu için gerekli temel hesap bilgilerini topluyoruz.\n\nİşleme Amacı: Verileriniz yalnızca AI görsel iyileştirme hizmetleri ve teknolojimizi geliştirmek için işlenir.\n\nVeri Saklama: İşlenmiş görseller 30 gün sonra otomatik olarak silinir. İşlemden sonra hemen silebilirsiniz.\n\nVeri Paylaşımı: Kişisel verilerinizi veya görsellerinizi asla üçüncü taraflarla paylaşmaz, satmaz veya dağıtmayız.",
+      "processes": {
+        "collection": {
+          "title": "Hangi Verileri Topluyoruz",
+          "description": "Yalnızca işleme için yüklediğiniz görselleri ve hizmet sunumu için gerekli temel hesap bilgilerini topluyoruz."
+        },
+        "purpose": {
+          "title": "İşleme Amacı",
+          "description": "Verileriniz yalnızca AI görsel iyileştirme hizmetleri ve teknolojimizi geliştirmek için işlenir."
+        },
+        "retention": {
+          "title": "Veri Saklama",
+          "description": "İşlenmiş görseller 30 gün sonra otomatik olarak silinir. İşlemden sonra hemen silebilirsiniz."
+        },
+        "sharing": {
+          "title": "Veri Paylaşımı",
+          "description": "Kişisel verilerinizi veya görsellerinizi asla üçüncü taraflarla paylaşmaz, satmaz veya dağıtmayız."
+        }
+      }
+    },
+    "contact": {
+      "title": "Gizlilik İletişimi",
+      "description": "Gizlilik hakkında sorularınız mı var veya haklarınızı kullanmak mı istiyorsunuz? Veri Koruma Sorumlumuza ulaşın.",
+      "email": "Gizlilik Ekibiyle İletişime Geç",
+      "contactForm": "İletişim Formunu Kullan"
     }
   },
   "common": {

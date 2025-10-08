@@ -3,6 +3,7 @@
     "home": "Startseite",
     "about": "Über uns",
     "contact": "Kontakt",
+    "privacy": "Datenschutz",
     "tryNow": "Jetzt testen"
   },
   "hero": {
@@ -157,6 +158,93 @@
       "title": "Bereit, Ihr perfektes Fitnessstudio zu gestalten?",
       "description": "Schließen Sie sich Tausenden von Fitness-Profis an, die FytZone nutzen, um fantastische Trainingsbereiche zu schaffen.",
       "button": "Vertrieb kontaktieren"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutz &",
+    "titleHighlight": "Sicherheit",
+    "description": "Ihr Datenschutz und Ihre Sicherheit haben für uns höchste Priorität. Erfahren Sie, wie wir Ihre Informationen schützen.",
+    "mainMessage": "Ihre Fotos sind privat und verschlüsselt.",
+    "mainDescription": "Wir verwenden fortschrittliche Verschlüsselung und Sicherheitsmaßnahmen, um sicherzustellen, dass Ihre Bilder und persönlichen Daten vollständig privat und sicher bleiben.",
+    "technicalSecurity": {
+      "title": "Technische Sicherheit",
+      "content": "Alle Bilder werden mit AES-256-Verschlüsselung vor dem Upload verschlüsselt und bleiben während der Verarbeitung verschlüsselt.\n\nIhre Daten werden in SOC 2 Typ II zertifizierten Rechenzentren mit mehreren Sicherheitsebenen gespeichert.\n\nAlle Datenübertragungen verwenden TLS 1.3-Verschlüsselung zum Schutz vor Abfangen.\n\nUnsere Systeme sind so konzipiert, dass nur Sie auf Ihre unverschlüsselten Daten zugreifen können.",
+      "features": {
+        "encryption": {
+          "title": "Ende-zu-Ende-Verschlüsselung",
+          "description": "Alle Bilder werden mit AES-256-Verschlüsselung vor dem Upload verschlüsselt und bleiben während der Verarbeitung verschlüsselt."
+        },
+        "storage": {
+          "title": "Sichere Cloud-Speicherung",
+          "description": "Ihre Daten werden in SOC 2 Typ II zertifizierten Rechenzentren mit mehreren Sicherheitsebenen gespeichert."
+        },
+        "transmission": {
+          "title": "Sichere Übertragung",
+          "description": "Alle Datenübertragungen verwenden TLS 1.3-Verschlüsselung zum Schutz vor Abfangen."
+        },
+        "access": {
+          "title": "Zero-Knowledge-Zugriff",
+          "description": "Unsere Systeme sind so konzipiert, dass nur Sie auf Ihre unverschlüsselten Daten zugreifen können."
+        }
+      }
+    },
+    "compliance": {
+      "title": "DSGVO & KVKK Compliance",
+      "content": "Auskunftsrecht: Sie können eine Kopie aller persönlichen Daten anfordern, die wir über Sie speichern.\n\nRecht auf Berichtigung: Sie können die Korrektur unrichtiger persönlicher Daten verlangen.\n\nRecht auf Löschung: Sie können jederzeit die Löschung Ihrer persönlichen Daten verlangen.\n\nDatenübertragbarkeit: Sie können Ihre Daten in einem strukturierten, maschinenlesbaren Format anfordern.\n\nRecht auf Einschränkung der Verarbeitung: Sie können eine Beschränkung der Verarbeitung Ihrer Daten verlangen.\n\nWiderspruchsrecht: Sie können der Verarbeitung Ihrer persönlichen Daten für bestimmte Zwecke widersprechen.",
+      "rights": {
+        "access": {
+          "title": "Auskunftsrecht",
+          "description": "Sie können eine Kopie aller persönlichen Daten anfordern, die wir über Sie speichern."
+        },
+        "rectification": {
+          "title": "Recht auf Berichtigung",
+          "description": "Sie können die Korrektur unrichtiger persönlicher Daten verlangen."
+        },
+        "erasure": {
+          "title": "Recht auf Löschung",
+          "description": "Sie können jederzeit die Löschung Ihrer persönlichen Daten verlangen."
+        },
+        "portability": {
+          "title": "Datenübertragbarkeit",
+          "description": "Sie können Ihre Daten in einem strukturierten, maschinenlesbaren Format anfordern."
+        },
+        "restriction": {
+          "title": "Recht auf Einschränkung der Verarbeitung",
+          "description": "Sie können eine Beschränkung der Verarbeitung Ihrer Daten verlangen."
+        },
+        "objection": {
+          "title": "Widerspruchsrecht",
+          "description": "Sie können der Verarbeitung Ihrer persönlichen Daten für bestimmte Zwecke widersprechen."
+        }
+      }
+    },
+    "dataProcessing": {
+      "title": "Datenverarbeitungsinformationen",
+      "content": "Welche Daten wir sammeln: Wir sammeln nur Bilder, die Sie zur Verarbeitung hochladen, und grundlegende Kontoinformationen, die für die Servicebereitstellung erforderlich sind.\n\nZweck der Verarbeitung: Ihre Daten werden ausschließlich für KI-Bildverbesserungsdienste und zur Verbesserung unserer Technologie verarbeitet.\n\nDatenspeicherung: Verarbeitete Bilder werden nach 30 Tagen automatisch gelöscht. Sie können sie sofort nach der Verarbeitung löschen.\n\nDatenweitergabe: Wir geben Ihre persönlichen Daten oder Bilder niemals an Dritte weiter, verkaufen oder verteilen sie.",
+      "processes": {
+        "collection": {
+          "title": "Welche Daten wir sammeln",
+          "description": "Wir sammeln nur Bilder, die Sie zur Verarbeitung hochladen, und grundlegende Kontoinformationen, die für die Servicebereitstellung erforderlich sind."
+        },
+        "purpose": {
+          "title": "Zweck der Verarbeitung",
+          "description": "Ihre Daten werden ausschließlich für KI-Bildverbesserungsdienste und zur Verbesserung unserer Technologie verarbeitet."
+        },
+        "retention": {
+          "title": "Datenspeicherung",
+          "description": "Verarbeitete Bilder werden nach 30 Tagen automatisch gelöscht. Sie können sie sofort nach der Verarbeitung löschen."
+        },
+        "sharing": {
+          "title": "Datenweitergabe",
+          "description": "Wir geben Ihre persönlichen Daten oder Bilder niemals an Dritte weiter, verkaufen oder verteilen sie."
+        }
+      }
+    },
+    "contact": {
+      "title": "Datenschutz-Kontakt",
+      "description": "Haben Sie Fragen zum Datenschutz oder möchten Sie Ihre Rechte ausüben? Kontaktieren Sie unseren Datenschutzbeauftragten.",
+      "email": "Datenschutz-Team kontaktieren",
+      "contactForm": "Kontaktformular verwenden"
     }
   },
   "common": {

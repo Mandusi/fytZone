@@ -2,9 +2,7 @@
   <div
     class="w-full p-5 flex border-b justify-center transition-colors duration-300"
     :class="{
-      // Border color changes based on theme, using a subtle gray for contrast
       'border-gray-200 dark:border-gray-800': true,
-      // Use the theme-aware background color
       'bg-bg-primary': true,
     }"
   >
