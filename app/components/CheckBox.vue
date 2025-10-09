@@ -1,25 +1,25 @@
 <template>
   <div class="flex flex-col gap-3">
     <CheckBoxItem
-      v-model="selected.bodybuilding"
+      v-model="selected"
       label="Bodybuilding"
       description="Focused on building muscle size, strength, and definition through weightlifting and structured resistance training."
       icon="i-lucide-dumbbell"
     />
     <CheckBoxItem
-      v-model="selected.cardio"
+      v-model="selected"
       label="Cardio"
       description="Improves heart health, stamina, and endurance with activities like running, cycling, or HIIT workouts."
       icon="i-lucide-heart-pulse"
     />
     <CheckBoxItem
-      v-model="selected.yoga"
+      v-model="selected"
       label="Yoga / Pilates"
       description="Enhances flexibility, balance, posture, and core strength while reducing stress and improving body awareness."
       icon="i-lucide-brain"
     />
     <CheckBoxItem
-      v-model="selected.crossfit"
+      v-model="selected"
       label="CrossFit / Calisthenics"
       description="A high-intensity, varied workout regimen combining weightlifting, cardio, and functional movements for overall fitness."
       icon="i-lucide-biceps-flexed"
@@ -28,10 +28,16 @@
 </template>
 
 <script setup lang="ts">
-const selected = reactive({
-  bodybuilding: false,
-  cardio: false,
-  yoga: false,
-  crossfit: false,
+const props = defineProps({
+  modelValue: { type: String, default: "" },
+});
+
+const emit = defineEmits<{
+  (e: "update:modelValue", value: string): void;
+}>();
+
+const selected = computed({
+  get: () => props.modelValue,
+  set: (val: string) => emit("update:modelValue", val),
 });
 </script>

@@ -1,8 +1,73 @@
+<template>
+  <UForm
+    :schema="schema"
+    :state="state"
+    class="w-full flex flex-col gap-3"
+    @submit="onSubmit"
+  >
+    <UFormField name="roomImage">
+      <UFileUpload
+        v-slot="{ open, removeFile }"
+        v-model="state.roomImage"
+        accept="image/*"
+        class="w-full border-dashed border-2 border-muted p-3 rounded-lg"
+      >
+        <div class="flex flex-wrap items-center gap-3" @click="open()">
+          <UAvatar
+            size="2xl"
+            :src="
+              state.roomImage ? createObjectUrl(state.roomImage) : undefined
+            "
+            icon="i-lucide-image"
+          />
+
+          <p v-if="state.roomImage" class="text-xs text-muted mt-1.5">
+            {{ state.roomImage.name }}
+            <UButton
+              label="Remove"
+              color="error"
+              variant="link"
+              size="xs"
+              class="p-0"
+              @click.stop="removeFile()"
+            />
+          </p>
+
+          <div>
+            <p v-if="state.roomImage" class="flex w-full">
+              Sellect the best fitting option below for your aims or click here
+              to change the image
+            </p>
+            <p v-else class="flex w-full">
+              Click here to upload a picture of the room you want to decorate
+              with Fytzone'
+            </p>
+          </div>
+        </div>
+      </UFileUpload>
+    </UFormField>
+
+    <CheckBox v-model="state.selectedActivity" />
+
+    <UButton
+      type="submit"
+      :disabled="!state.roomImage || !state.selectedActivity"
+      label="Generate My Gym"
+      color="secondary"
+      class="flex w-full justify-center text-white font-semibold bg-button text-center p-3 disabled:"
+    />
+  </UForm>
+</template>
+
 <script setup lang="ts">
 import * as z from "zod";
 import type { FormSubmitEvent } from "@nuxt/ui";
 
-const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
+const emit = defineEmits<{
+  (e: "file-uploaded", roomImage: File, selectedActivity: string): void;
+}>();
+
+const MAX_FILE_SIZE = 8 * 1024 * 1024; // 2MB
 const MIN_DIMENSIONS = { width: 200, height: 200 };
 const MAX_DIMENSIONS = { width: 4096, height: 4096 };
 const ACCEPTED_IMAGE_TYPES = [
@@ -10,6 +75,10 @@ const ACCEPTED_IMAGE_TYPES = [
   "image/jpg",
   "image/png",
   "image/webp",
+  "image/heic",
+  "image/heif",
+  "image/avif",
+  "image/tiff",
 ];
 
 const formatBytes = (bytes: number, decimals = 2) => {
@@ -24,7 +93,7 @@ const formatBytes = (bytes: number, decimals = 2) => {
 };
 
 const schema = z.object({
-  avatar: z
+  roomImage: z
     .instanceof(File, {
       message: "Please select an image file.",
     })
@@ -56,12 +125,14 @@ const schema = z.object({
         message: `The image dimensions are invalid. Please upload an image between ${MIN_DIMENSIONS.width}x${MIN_DIMENSIONS.height} and ${MAX_DIMENSIONS.width}x${MAX_DIMENSIONS.height} pixels.`,
       }
     ),
+  selectedActivity: z.string(),
 });
 
 type schema = z.output<typeof schema>;
 
 const state = reactive<Partial<schema>>({
-  avatar: undefined,
+  roomImage: undefined,
+  selectedActivity: "",
 });
 
 function createObjectUrl(file: File): string {
@@ -69,57 +140,6 @@ function createObjectUrl(file: File): string {
 }
 
 async function onSubmit(event: FormSubmitEvent<schema>) {
-  console.log(event.data);
+  emit("file-uploaded", event.data.roomImage, event.data.selectedActivity);
 }
 </script>
-
-<template>
-  <UForm :schema="schema" :state="state" class="w-full" @submit="onSubmit">
-    <UFormField name="avatar" label="Upload your room image">
-      <UFileUpload
-        v-slot="{ open, removeFile }"
-        v-model="state.avatar"
-        accept="image/*"
-        class="w-full border-dashed border-2 border-muted rounded-lg"
-      >
-        <div class="flex flex-wrap items-center gap-3" @click="open()">
-          <UAvatar
-            size="2xl"
-            :src="state.avatar ? createObjectUrl(state.avatar) : undefined"
-            icon="i-lucide-image"
-          />
-
-          <UButton
-            :label="state.avatar ? 'Change image' : 'Upload image'"
-            color="neutral"
-            variant="outline"
-            @click="open()"
-          />
-        </div>
-
-        <p v-if="state.avatar" class="text-xs text-muted mt-1.5">
-          {{ state.avatar.name }}
-
-          <UButton
-            label="Remove"
-            color="error"
-            variant="link"
-            size="xs"
-            class="p-0"
-            @click="removeFile()"
-          />
-        </p>
-      </UFileUpload>
-    </UFormField>
-
-    <CheckBox />
-
-    <UButton
-      type="submit"
-      disabled
-      label="Submit"
-      color="secondary"
-      class="w-full"
-    />
-  </UForm>
-</template>
