@@ -73,10 +73,11 @@ async function handleFileUploaded(imageFile: File, selectedActivity: string) {
 
   const formData = new FormData();
   formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
+  formData.append("selectedActivity", selectedActivity);
 
   fetch(`${useRuntimeConfig().public.API}/image-generation`, {
     method: "POST",
-    body: JSON.stringify({ formData, selectedActivity }),
+    body: formData,
   })
     .then(async (response) => {
       const res = await response.json();
