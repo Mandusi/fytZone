@@ -13,14 +13,19 @@
         </div>
       </div>
 
-      <UploadImage />
+      <UploadImageForm @file-uploaded="handleFileUploaded" />
 
       <div>
-        <ImgComparisonSlider class="slider-example-focus rounded" tabindex="0">
+        <ImgComparisonSlider
+          class="slider-example-focus slider-example-split-line border h-auto border-button rounded"
+          tabindex="0"
+          hover="hover"
+          :value="sliderValue"
+        >
           <!-- eslint-disable -->
           <img
             slot="first"
-            style="width: 100%"
+            style="width: 100%; object-fit: contain"
             :src="
               colorMode.value === 'dark'
                 ? imageNames.dark.before
@@ -45,48 +50,6 @@
 <script setup lang="ts">
 import { ImgComparisonSlider } from "@img-comparison-slider/vue";
 
-// export default {
-//   name: "ExampleComponent",
-//   components: {
-//     ImgComparisonSlider,
-//   },
-// };
-
-// function handleFileUploaded(imageBuffer: ArrayBuffer) {
-//   console.log("File uploaded:", imageBuffer);
-
-//   imageNames.value.dark.before = URL.createObjectURL(new Blob([imageBuffer]));
-//   console.log(imageBuffer);
-//   imageNames.value.light.before = URL.createObjectURL(new Blob([imageBuffer]));
-
-//   const formData = new FormData();
-//   formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
-
-//   fetch(`${useRuntimeConfig().public.API}/image-generation`, {
-//     method: "POST",
-//     body: formData,
-//   })
-//     .then(async (response) => {
-//       const res = await response.json();
-//       console.log("API Response:", res);
-
-//       if (res.success && res.data && res.data.data) {
-//         const imageData = new Uint8Array(res.data.data);
-
-//         const blob = new Blob([imageData], { type: "image/png" });
-
-//         const imageUrl = URL.createObjectURL(blob);
-//         imageNames.value.dark.after = imageUrl;
-//         imageNames.value.light.after = imageUrl;
-//       } else {
-//         console.error("Invalid response format:", res);
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Error generating image:", error);
-//     });
-// }
-
 const colorMode = useColorMode();
 
 const imageNames = ref({
@@ -99,6 +62,80 @@ const imageNames = ref({
     after: "dark-after.png",
   },
 });
+
+async function handleFileUploaded(imageFile: File, selectedActivity: string) {
+  console.log("Received file:", imageFile);
+  const imageBuffer = await imageFile.arrayBuffer();
+
+  imageNames.value.dark.before = URL.createObjectURL(new Blob([imageBuffer]));
+  console.log(imageBuffer);
+  imageNames.value.light.before = URL.createObjectURL(new Blob([imageBuffer]));
+
+  const formData = new FormData();
+  formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
+
+  fetch(`${useRuntimeConfig().public.API}/image-generation`, {
+    method: "POST",
+    body: JSON.stringify({ formData, selectedActivity }),
+  })
+    .then(async (response) => {
+      const res = await response.json();
+      console.log("API Response:", res);
+
+      if (res.success && res.data && res.data.data) {
+        const imageData = new Uint8Array(res.data.data);
+
+        const blob = new Blob([imageData], { type: "image/png" });
+
+        const imageUrl = URL.createObjectURL(blob);
+        imageNames.value.dark.after = imageUrl;
+        imageNames.value.light.after = imageUrl;
+      } else {
+        console.error("Invalid response format:", res);
+      }
+    })
+    .catch((error) => {
+      console.error("Error generating image:", error);
+    });
+}
+
+const sliderValue = ref(100);
+
+function easeInOut(t: number) {
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+}
+
+function animateValue(start: number, end: number, duration: number, delay = 0) {
+  return new Promise<void>((resolve) => {
+    setTimeout(() => {
+      const startTime = performance.now();
+
+      function step(now: number) {
+        const rawProgress = Math.min((now - startTime) / duration, 1);
+        const easedProgress = easeInOut(rawProgress);
+
+        sliderValue.value = start + (end - start) * easedProgress;
+
+        if (rawProgress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          resolve();
+        }
+      }
+
+      requestAnimationFrame(step);
+    }, delay);
+  });
+}
+
+// Run the animation once
+async function run() {
+  await animateValue(100, 0, 1200); // back to 50 in 400ms
+  await animateValue(0, 100, 1200); // rise in 1s
+  await animateValue(100, 50, 1200); // back to 50 in 400ms
+}
+
+run();
 </script>
 
 <style scoped>
@@ -108,5 +145,14 @@ const imageNames = ref({
 
 .slider-example-focus:focus {
   outline: none;
+}
+
+.slider-example-split-line {
+  --divider-width: 3px;
+
+  --divider-color: var(--color-button);
+  --default-handle-color: var(--color-button);
+  --default-handle-width: 40px;
+  --hover-handle-width: 80px;
 }
 </style>
