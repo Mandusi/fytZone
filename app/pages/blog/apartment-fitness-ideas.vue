@@ -1,9 +1,16 @@
 <template>
   <div class="min-h-screen w-full flex justify-center">
     <BlogDetail
-      title="Apartment Fitness Ideas"
-      content="Living in an apartment doesn't mean you have to compromise on your fitness goals. Here are some creative ideas to stay active and healthy within the confines of your apartment space."
+      :title="$t('blogs.apartmentFitness.title')"
+      :content="$t('blogs.apartmentFitness.content')"
       image-url="/blog/small-apartment-fitness-ideas.png"
     />
   </div>
 </template>
+<script setup>
+useSeoMeta({
+  title: "Apartment Fitness Ideas - FytZone",
+  description:
+    "Discover creative apartment fitness ideas to stay active and healthy in small spaces. Learn how to make the most of your apartment for effective workouts.",
+});
+</script>
