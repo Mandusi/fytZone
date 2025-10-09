@@ -1,145 +1,76 @@
 <template>
-  <UForm
-    :schema="schema"
-    :state="state"
-    class="w-full flex flex-col gap-3"
-    @submit="onSubmit"
-  >
-    <UFormField name="roomImage">
-      <UFileUpload
-        v-slot="{ open, removeFile }"
-        v-model="state.roomImage"
-        accept="image/*"
-        class="w-full border-dashed border-2 border-muted p-3 rounded-lg"
-      >
-        <div class="flex flex-wrap items-center gap-3" @click="open()">
-          <UAvatar
-            size="2xl"
-            :src="
-              state.roomImage ? createObjectUrl(state.roomImage) : undefined
-            "
-            icon="i-lucide-image"
-          />
-
-          <p v-if="state.roomImage" class="text-xs text-muted mt-1.5">
-            {{ state.roomImage.name }}
-            <UButton
-              label="Remove"
-              color="error"
-              variant="link"
-              size="xs"
-              class="p-0"
-              @click.stop="removeFile()"
-            />
-          </p>
-
-          <div>
-            <p v-if="state.roomImage" class="flex w-full">
-              Sellect the best fitting option below for your aims or click here
-              to change the image
-            </p>
-            <p v-else class="flex w-full">
-              Click here to upload a picture of the room you want to decorate
-              with Fytzone'
-            </p>
-          </div>
-        </div>
-      </UFileUpload>
-    </UFormField>
-
-    <CheckBox v-model="state.selectedActivity" />
-
-    <UButton
-      type="submit"
-      :disabled="!state.roomImage || !state.selectedActivity"
-      label="Generate My Gym"
-      color="secondary"
-      class="flex w-full justify-center text-white font-semibold bg-button text-center p-3 disabled:"
+  <div class="flex flex-col gap-6">
+    <input
+      ref="fileInput"
+      type="file"
+      accept="image/jpg, image/jpeg, image/png"
+      @change="(e) => (inputFile = e.target.files ? e.target.files[0] : null)"
+      class="hidden"
     />
-  </UForm>
+
+    <div class="flex flex-col gap-2">
+      <span class="font-medium text-lg">
+        Upload an image of your workout area
+      </span>
+      <div
+        @click="$refs.fileInput.click()"
+        class="cursor-pointer flex items-center justify-center w-full min-h-16 bg-secondary-bg hover:bg-muted border border-muted hover:border-button rounded-xl overflow-hidden transition duration-300"
+      >
+        <img
+          v-if="inputFile"
+          :src="inputUrl"
+          class="object-contain w-full h-full"
+        />
+        <div v-else class="flex justify-center items-center gap-3">
+          <UIcon name="i-lucide-upload" size="24" class="mb-2" />
+          <span class="text-sm text-muted">
+            Upload an image (preferably a full body image with a plain
+            background)
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <span class="font-medium text-lg">
+        How do you want to use this area?
+      </span>
+      <ActivitySelectInput v-model="activity" />
+    </div>
+  </div>
 </template>
 
-<script setup lang="ts">
-import * as z from "zod";
-import type { FormSubmitEvent } from "@nuxt/ui";
+<script setup>
+const activity = ref();
+const inputFile = ref();
+const outputBuffer = ref();
 
-const emit = defineEmits<{
-  (e: "file-uploaded", roomImage: File, selectedActivity: string): void;
-}>();
+const inputUrl = computed(() =>
+  inputFile.value ? URL.createObjectURL(inputFile.value) : null
+);
 
-const MAX_FILE_SIZE = 8 * 1024 * 1024; // 2MB
-const MIN_DIMENSIONS = { width: 200, height: 200 };
-const MAX_DIMENSIONS = { width: 4096, height: 4096 };
-const ACCEPTED_IMAGE_TYPES = [
-  "image/jpeg",
-  "image/jpg",
-  "image/png",
-  "image/webp",
-  "image/heic",
-  "image/heif",
-  "image/avif",
-  "image/tiff",
-];
+async function generate() {
+  try {
+    const body = new FormData();
+    body.append("file", inputFile.value);
+    body.append("activity", activity.value);
+    const res = await fetch(
+      `${useRuntimeConfig().public.API}/image-generation`,
+      { method: "POST", body }
+    );
 
-const formatBytes = (bytes: number, decimals = 2) => {
-  if (bytes === 0) return "0 Bytes";
-  const k = 1024;
-  const dm = decimals < 0 ? 0 : decimals;
-  const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return (
-    Number.parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i]
-  );
-};
+    if (!res.ok) throw new Error("Failed to generate image");
 
-const schema = z.object({
-  roomImage: z
-    .instanceof(File, {
-      message: "Please select an image file.",
-    })
-    .refine((file) => file.size <= MAX_FILE_SIZE, {
-      message: `The image is too large. Please choose an image smaller than ${formatBytes(MAX_FILE_SIZE)}.`,
-    })
-    .refine((file) => ACCEPTED_IMAGE_TYPES.includes(file.type), {
-      message: "Please upload a valid image file (JPEG, PNG, or WebP).",
-    })
-    .refine(
-      (file) =>
-        new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const img = new Image();
-            img.onload = () => {
-              const meetsDimensions =
-                img.width >= MIN_DIMENSIONS.width &&
-                img.height >= MIN_DIMENSIONS.height &&
-                img.width <= MAX_DIMENSIONS.width &&
-                img.height <= MAX_DIMENSIONS.height;
-              resolve(meetsDimensions);
-            };
-            img.src = e.target?.result as string;
-          };
-          reader.readAsDataURL(file);
-        }),
-      {
-        message: `The image dimensions are invalid. Please upload an image between ${MIN_DIMENSIONS.width}x${MIN_DIMENSIONS.height} and ${MAX_DIMENSIONS.width}x${MAX_DIMENSIONS.height} pixels.`,
-      }
-    ),
-  selectedActivity: z.string(),
-});
-
-type schema = z.output<typeof schema>;
-
-const state = reactive<Partial<schema>>({
-  roomImage: undefined,
-  selectedActivity: "",
-});
-
-function createObjectUrl(file: File): string {
-  return URL.createObjectURL(file);
+    outputBuffer.value = await res.arrayBuffer();
+  } catch (error) {
+    throw error;
+  }
 }
 
-async function onSubmit(event: FormSubmitEvent<schema>) {
-  emit("file-uploaded", event.data.roomImage, event.data.selectedActivity);
-}
+defineExpose({
+  activity,
+  inputFile,
+  outputBuffer,
+  generate,
+});
 </script>

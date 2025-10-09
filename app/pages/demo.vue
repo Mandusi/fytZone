@@ -13,157 +13,60 @@
         </div>
       </div>
 
-      <UploadImageForm @file-uploaded="handleFileUploaded" />
+      <div class="flex flex-col gap-6">
+        <UploadImageForm ref="Form" />
 
-      <div>
-        <ImgComparisonSlider
-          class="slider-example-focus slider-example-split-line border h-auto border-button rounded"
-          tabindex="0"
-          hover="hover"
-          :value="sliderValue"
-        >
-          <!-- eslint-disable -->
-          <img
-            slot="first"
-            style="width: 100%; object-fit: contain"
-            :src="
-              colorMode.value === 'dark'
-                ? imageNames.dark.before
-                : imageNames.light.before
-            "
+        <div class="flex justify-center w-full">
+          <UButton
+            label="Generate My Gym"
+            icon="i-lucide-sparkles"
+            size="xl"
+            class="px-20 py-3 text-white cursor-pointer !bg-button rounded-full disabled:!bg-muted"
+            :disabled="!Form?.inputFile || !Form?.activity"
+            @click="generate"
           />
-          <img
-            slot="second"
-            style="width: 100%"
-            :src="
-              colorMode.value === 'dark'
-                ? imageNames.dark.after
-                : imageNames.light.after
-            "
-          />
-          <!-- eslint-enable -->
-        </ImgComparisonSlider>
+        </div>
       </div>
-      <LoadingAnimation :show="loaing" />
+
+      <ComparisonSlider
+        :images="
+          inputImage && resultImage
+            ? { before: inputImage, after: resultImage }
+            : null
+        "
+      />
+
+      <LoadingAnimation :show="isLoading" />
     </div>
   </div>
 </template>
-<script setup lang="ts">
-import { ImgComparisonSlider } from "@img-comparison-slider/vue";
+<script setup>
+const isLoading = ref(false);
+const Form = ref();
 
-const colorMode = useColorMode();
-
-const loaing = ref(false);
-const toast = useToast();
-const imageNames = ref({
-  light: {
-    before: "/white-before.jpg",
-    after: "/white-after.png",
-  },
-  dark: {
-    before: "dark-before.jpg",
-    after: "dark-after.png",
-  },
+const inputImage = computed(() => {
+  const file = Form.value?.inputFile;
+  return file ? URL.createObjectURL(file) : null;
 });
 
-async function handleFileUploaded(imageFile: File, selectedActivity: string) {
-  loaing.value = true;
-  console.log("Received file:", imageFile);
-  const imageBuffer = await imageFile.arrayBuffer();
+const resultImage = computed(() => {
+  const buffer = Form.value?.outputBuffer;
+  return buffer ? URL.createObjectURL(new Blob([buffer])) : null;
+});
 
-  imageNames.value.dark.before = URL.createObjectURL(new Blob([imageBuffer]));
-  console.log(imageBuffer);
-  imageNames.value.light.before = URL.createObjectURL(new Blob([imageBuffer]));
-
-  const formData = new FormData();
-  formData.append("file", new Blob([imageBuffer]), "uploaded-image.jpg");
-  formData.append("selectedActivity", selectedActivity);
-
-  fetch(`${useRuntimeConfig().public.API}/image-generation`, {
-    method: "POST",
-    body: formData,
-  })
-    .then(async (response) => {
-      const res = await response.json();
-      console.log("API Response:", res);
-
-      if (res.success && res.data && res.data.data) {
-        const imageData = new Uint8Array(res.data.data);
-
-        const blob = new Blob([imageData], { type: "image/png" });
-
-        const imageUrl = URL.createObjectURL(blob);
-        imageNames.value.dark.after = imageUrl;
-        imageNames.value.light.after = imageUrl;
-      } else {
-        console.error("Invalid response format:", res);
-      }
-    })
-    .catch((error) => {
-      console.error("Error during fetch:", error);
-      toast.add({
-        title: "Error",
-        description: "There was an error processing your request.",
-        color: "error",
-      });
+async function generate() {
+  try {
+    isLoading.value = true;
+    await Form.value.generate();
+  } catch (error) {
+    useToast().add({
+      title: "Error",
+      description:
+        error.message || "An error occurred during image generation.",
+      color: "error",
     });
-  loaing.value = false;
+  } finally {
+    isLoading.value = false;
+  }
 }
-
-const sliderValue = ref(100);
-
-function easeInOut(t: number) {
-  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-}
-
-function animateValue(start: number, end: number, duration: number, delay = 0) {
-  return new Promise<void>((resolve) => {
-    setTimeout(() => {
-      const startTime = performance.now();
-
-      function step(now: number) {
-        const rawProgress = Math.min((now - startTime) / duration, 1);
-        const easedProgress = easeInOut(rawProgress);
-
-        sliderValue.value = start + (end - start) * easedProgress;
-
-        if (rawProgress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          resolve();
-        }
-      }
-
-      requestAnimationFrame(step);
-    }, delay);
-  });
-}
-
-// Run the animation once
-async function run() {
-  await animateValue(100, 0, 1200); // back to 50 in 400ms
-  await animateValue(0, 100, 1200); // rise in 1s
-  await animateValue(100, 50, 1200); // back to 50 in 400ms
-}
-
-run();
 </script>
-
-<style scoped>
-.slider-example-focus {
-  transition: box-shadow 200ms ease-in-out;
-}
-
-.slider-example-focus:focus {
-  outline: none;
-}
-
-.slider-example-split-line {
-  --divider-width: 3px;
-
-  --divider-color: var(--color-button);
-  --default-handle-color: var(--color-button);
-  --default-handle-width: 40px;
-  --hover-handle-width: 80px;
-}
-</style>
