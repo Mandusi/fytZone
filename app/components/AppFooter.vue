@@ -17,21 +17,21 @@
           <nav class="gap-6 justify-center items-center flex font-medium">
             <NuxtLink
               to="/#home"
-              class="transition-colors hover:text-accent-blue max-sm:hidden"
+              class="hover:text-accent-blue max-sm:hidden"
               active-class="text-accent-blue"
               :class="{ 'text-text-primary': true }"
-              >Home</NuxtLink
+              >{{ $t("nav.home") }}</NuxtLink
             >
             <NuxtLink
               to="/#about"
-              class="transition-colors hover:text-accent-blue max-sm:hidden"
+              class="hover:text-accent-blue max-sm:hidden"
               active-class="text-accent-blue"
               :class="{ 'text-text-primary': true }"
-              >About</NuxtLink
+              >{{ $t("nav.about") }}</NuxtLink
             >
             <NuxtLink
               to="/#contact"
-              class="transition-colors hover:text-accent-blue max-sm:hidden"
+              class="hover:text-accent-blue max-sm:hidden"
               active-class="text-accent-blue"
               :class="{ 'text-text-primary': true }"
             >
@@ -39,7 +39,7 @@
             </NuxtLink>
             <NuxtLink
               to="/privacy"
-              class="transition-colors hover:text-accent-blue"
+              class="hover:text-accent-blue"
               :class="{ 'text-text-primary': true }"
             >
               {{ $t("nav.privacy") }}

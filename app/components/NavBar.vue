@@ -2,7 +2,7 @@
   <!-- Mobile -->
   <div
     v-if="isOnMobile"
-    class="w-full p-5 max-sm:p-3 flex border-b justify-center transition-colors duration-300"
+    class="w-full p-5 max-sm:p-3 flex border-b justify-center duration-300"
     :class="{
       'border-gray-200 dark:border-gray-800': true,
       'bg-bg-primary': true,
@@ -21,14 +21,14 @@
       </div>
       <div class="flex items-center gap-2">
         <div
-          class="rounded-full cursor-pointer h-8 w-8 flex justify-center items-center transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="rounded-full cursor-pointer h-8 w-8 flex justify-center items-center duration-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="Toggle color mode"
           @click="toggleColorMode"
         >
           <UIcon
             :name="iconName"
             :size="iconName === 'i-lucide-moon' ? 20 : 24"
-            class="transition-colors duration-200"
+            class="duration-200"
             :class="{
               'text-yellow-500': colorMode.value === 'light', // Yellow sun
               'text-indigo-400': colorMode.value === 'dark', // Indigo moon
@@ -58,7 +58,7 @@
         >
           <NuxtLink
             to="/demo"
-            class="font-medium transition-colors hover:gradient-text whitespace-nowrap flex items-center gap-1"
+            class="font-medium hover:gradient-text whitespace-nowrap flex items-center gap-1"
             :class="{
               'border-gray-300 dark:border-gray-700 text-text-primary': true,
             }"
@@ -109,7 +109,7 @@
         <nav class="flex flex-col p-5 space-y-4">
           <NuxtLink
             to="/#home"
-            class="text-lg font-medium transition-colors hover:text-accent-blue py-2"
+            class="text-lg font-medium hover:text-accent-blue py-2"
             :class="{ 'text-text-primary': true }"
             @click="closeMobileMenu"
           >
@@ -117,7 +117,7 @@
           </NuxtLink>
           <NuxtLink
             to="/#about"
-            class="text-lg font-medium transition-colors hover:text-accent-blue py-2"
+            class="text-lg font-medium hover:text-accent-blue py-2"
             :class="{ 'text-text-primary': true }"
             @click="closeMobileMenu"
           >
@@ -125,7 +125,7 @@
           </NuxtLink>
           <NuxtLink
             to="/#contact"
-            class="text-lg font-medium transition-colors hover:text-accent-blue py-2"
+            class="text-lg font-medium hover:text-accent-blue py-2"
             :class="{ 'text-text-primary': true }"
             @click="closeMobileMenu"
           >
@@ -133,11 +133,11 @@
           </NuxtLink>
           <NuxtLink
             to="/pricing"
-            class="text-lg font-medium transition-colors hover:text-accent-blue py-2"
+            class="text-lg font-medium hover:text-accent-blue py-2"
             :class="{ 'text-text-primary': true }"
             @click="closeMobileMenu"
           >
-            Pricing
+            {{ $t("nav.pricing") }}
           </NuxtLink>
         </nav>
 
@@ -160,14 +160,14 @@
   <!-- Desktop -->
   <div
     v-else
-    class="w-full p-5 flex border-b justify-center transition-colors duration-300"
+    class="w-full p-5 flex border-b justify-center items-center duration-300"
     :class="{
       'border-gray-200 dark:border-gray-800': true,
       'bg-bg-primary': true,
     }"
   >
-    <div class="flex items-center max-w-4xl justify-between w-full mx-auto">
-      <div class="flex flex-1 items-center">
+    <div class="flex items-center max-w-4xl justify-between w-full">
+      <div class="flex items-center">
         <NuxtLink to="/">
           <img
             :src="
@@ -180,25 +180,25 @@
       </div>
 
       <nav
-        class="flex-1 gap-6 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
+        class="gap-6 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
       >
         <NuxtLink
           to="/#home"
-          class="transition-colors hover:text-accent-blue"
+          class="hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
           >{{ $t("nav.home") }}</NuxtLink
         >
         <NuxtLink
           to="/#about"
-          class="transition-colors hover:text-accent-blue"
+          class="hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
           >{{ $t("nav.about") }}</NuxtLink
         >
         <NuxtLink
           to="/#contact"
-          class="transition-colors hover:text-accent-blue"
+          class="hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
         >
@@ -206,24 +206,24 @@
         </NuxtLink>
         <NuxtLink
           to="/pricing"
-          class="transition-colors hover:text-accent-blue"
+          class="hover:text-accent-blue"
           active-class="text-accent-blue"
           :class="{ 'text-text-primary': true }"
         >
-          Pricing
+          {{ $t("nav.pricing") }}
         </NuxtLink>
       </nav>
 
-      <div class="flex flex-1 items-center gap-2 justify-end">
+      <div class="flex items-center gap-2 justify-end">
         <div
-          class="rounded-full cursor-pointer h-8 w-8 flex justify-center items-center transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="rounded-full cursor-pointer h-8 w-8 flex justify-center items-center duration-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="Toggle color mode"
           @click="toggleColorMode"
         >
           <UIcon
             :name="iconName"
             :size="iconName === 'i-lucide-moon' ? 20 : 24"
-            class="transition-colors duration-200"
+            class="duration-200"
             :class="{
               'text-yellow-500': colorMode.value === 'light', // Yellow sun
               'text-indigo-400': colorMode.value === 'dark', // Indigo moon

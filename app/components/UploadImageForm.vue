@@ -40,7 +40,7 @@
             </p>
             <p v-else class="flex w-full">
               Click here to upload a picture of the room you want to decorate
-              with Fytzone'
+              with Fytzone
             </p>
           </div>
         </div>
@@ -98,7 +98,9 @@ const schema = z.object({
       message: "Please select an image file.",
     })
     .refine((file) => file.size <= MAX_FILE_SIZE, {
-      message: `The image is too large. Please choose an image smaller than ${formatBytes(MAX_FILE_SIZE)}.`,
+      message: `The image is too large. Please choose an image smaller than ${formatBytes(
+        MAX_FILE_SIZE
+      )}.`,
     })
     .refine((file) => ACCEPTED_IMAGE_TYPES.includes(file.type), {
       message: "Please upload a valid image file (JPEG, PNG, or WebP).",
