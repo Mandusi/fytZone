@@ -9,13 +9,11 @@
         <div class="flex gap-6 items-center">
           <UButton
             icon="i-lucide-sparkles"
-            size="md"
-            color="secondary"
-            variant="solid"
-            class="px-10 py-2 text-white bg-button rounded-full"
+            class="px-5 py-2 text-white bg-button rounded-full max-sm:px-3 max-sm:py-1 max-sm:text-sm"
             @click="$router.push('/demo')"
-            >Try Now</UButton
           >
+            {{ $t("nav.tryNow") }}
+          </UButton>
           <nav
             class="gap-6 justify-center items-center hidden md:flex font-medium"
           >
@@ -39,28 +37,20 @@
               active-class="text-accent-blue"
               :class="{ 'text-text-primary': true }"
             >
-              Contact
+              {{ $t("nav.contact") }}
             </NuxtLink>
           </nav>
           <NuxtLink
             to="/privacy"
             class="transition-colors hover:text-accent-blue"
-            active-class="text-accent-blue"
             :class="{ 'text-text-primary': true }"
           >
             {{ $t("nav.privacy") }}
           </NuxtLink>
         </div>
-        <div>
-          <NuxtLink
-            to="https://github.com/codemirket"
-            class="text-lg text-muted-text"
-            >by Mirket</NuxtLink
-          >
-        </div>
       </div>
       <div>
-        <p class="text-muted-text max-sm:text-sm text-center">
+        <p class="text-muted-text max-sm:text-xs text-center">
           Copyright © 2025 FytZone. All rights reserved.
         </p>
       </div>

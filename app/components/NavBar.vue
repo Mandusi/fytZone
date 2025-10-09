@@ -45,14 +45,6 @@
           {{ $t("nav.contact") }}
         </NuxtLink>
         <NuxtLink
-          to="/#blogs"
-          class="transition-colors hover:text-accent-blue"
-          active-class="text-accent-blue"
-          :class="{ 'text-text-primary': true }"
-        >
-          Blogs
-        </NuxtLink>
-        <NuxtLink
           to="/pricing"
           class="transition-colors hover:text-accent-blue"
           active-class="text-accent-blue"
@@ -97,7 +89,7 @@
         </UDropdownMenu>
 
         <div
-          class="flex items-center gap-2 border px-3 py-1 rounded-full hover:shadow-md transition-shadow duration-200"
+          class="flex items-center gap-2 border px-3 py-1 max-sm:border-none max-sm:p-0 rounded-full hover:shadow-md transition-shadow duration-200"
         >
           <NuxtLink
             to="/demo"
@@ -106,7 +98,9 @@
               'border-gray-300 dark:border-gray-700 text-text-primary': true,
             }"
           >
-            {{ $t("nav.tryNow") }}
+            <span class="max-sm:hidden">
+              {{ $t("nav.tryNow") }}
+            </span>
             <UIcon name="i-lucide-sparkles" size="16" />
           </NuxtLink>
         </div>
@@ -135,24 +129,15 @@ const languageItems = computed(() => [
   [
     {
       icon: "i-circle-flags-en",
-      onSelect: () => {
-        console.log("Switching to English");
-        setLocale("en");
-      },
+      onSelect: () => setLocale("en"),
     },
     {
       icon: "i-circle-flags-tr",
-      onSelect: () => {
-        console.log("Switching to Turkish");
-        setLocale("tr");
-      },
+      onSelect: () => setLocale("tr"),
     },
     {
       icon: "i-circle-flags-de",
-      onSelect: () => {
-        console.log("Switching to German");
-        setLocale("de");
-      },
+      onSelect: () => setLocale("de"),
     },
   ],
 ]);
