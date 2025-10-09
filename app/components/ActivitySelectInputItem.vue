@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-full gap-5 bg-secondary-bg hover:bg-muted items-center border hover:cursor-pointer border-muted rounded-lg p-4 transition duration-300"
+    class="flex w-full gap-5 bg-secondary-bg hover:bg-muted items-center border hover:cursor-pointer border-muted rounded-xl p-4 transition duration-300"
     role="checkbox"
     :aria-checked="props.modelValue === props.label"
     tabindex="0"

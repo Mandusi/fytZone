@@ -23,10 +23,7 @@
         />
         <div v-else class="flex justify-center items-center gap-3">
           <UIcon name="i-lucide-upload" size="24" class="mb-2" />
-          <span class="text-sm text-muted">
-            Upload an image (preferably a full body image with a plain
-            background)
-          </span>
+          <span class="text-sm"> Upload the image of your workout</span>
         </div>
       </div>
     </div>
