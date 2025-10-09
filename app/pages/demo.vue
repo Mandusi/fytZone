@@ -44,6 +44,7 @@
           <!-- eslint-enable -->
         </ImgComparisonSlider>
       </div>
+      <LoadingAnimation :show="loaing" />
     </div>
   </div>
 </template>
@@ -52,6 +53,8 @@ import { ImgComparisonSlider } from "@img-comparison-slider/vue";
 
 const colorMode = useColorMode();
 
+const loaing = ref(false);
+const toast = useToast();
 const imageNames = ref({
   light: {
     before: "/white-before.jpg",
@@ -64,6 +67,7 @@ const imageNames = ref({
 });
 
 async function handleFileUploaded(imageFile: File, selectedActivity: string) {
+  loaing.value = true;
   console.log("Received file:", imageFile);
   const imageBuffer = await imageFile.arrayBuffer();
 
@@ -95,8 +99,14 @@ async function handleFileUploaded(imageFile: File, selectedActivity: string) {
       }
     })
     .catch((error) => {
-      console.error("Error generating image:", error);
+      console.error("Error during fetch:", error);
+      toast.add({
+        title: "Error",
+        description: "There was an error processing your request.",
+        color: "error",
+      });
     });
+  loaing.value = false;
 }
 
 const sliderValue = ref(100);
