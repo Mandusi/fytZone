@@ -1,18 +1,18 @@
 <template>
   <div
     id="contact"
-    class="flex w-full h-[calc(100vh-127px)] justify-center items-center"
+    class="flex w-full h-[calc(100vh-127px)] justify-center items-center max-sm:px-3"
   >
     <UForm
       :schema="schema"
       :state="state"
-      class="flex flex-col p-2 md:p-0 gap-4 w-full max-w-4xl mt-8"
+      class="flex flex-col gap-4 w-full max-w-4xl"
       @submit="onSubmit"
     >
-      <h2 class="text-black dark:text-primary-text">
+      <p class="max-sm:text-xl text-3xl text-black dark:text-primary-text">
         {{ $t("contact.title") }}
-      </h2>
-      <p class="mt-4 text-lg">
+      </p>
+      <p class="max-sm:text-sm">
         {{ $t("contact.description") }}
       </p>
 

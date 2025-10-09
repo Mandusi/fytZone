@@ -1,23 +1,23 @@
 <template>
   <div
     id="about"
-    class="flex w-full h-screen bg-secondary-bg justify-center items-center"
+    class="flex w-full h-[calc(100vh-127px)] max-sm:h-calc bg-secondary-bg justify-center items-center"
   >
-    <div class="max-w-4xl flex flex-col p-2 md:p-0 gap-8">
-      <h2 class="text-black dark:text-primary-text font-[Inter]">
+    <div class="max-w-4xl flex flex-col max-sm:px-3 gap-8 max-sm:gap-5">
+      <p class="text-black dark:text-primary-text text-3xl max-sm:text-2xl">
         {{ $t("nav.about") }}
-      </h2>
-      <p class="mt-4 text-lg">
+      </p>
+      <p class="text-lg max-sm:text-sm">
         {{ $t("about.description") }}
       </p>
 
       <div class="flex gap-5 items-center">
         <UIcon
           name="i-lucide-dumbbell"
-          size="24"
+          :size="isOnMobile ? 20 : 24"
           class="bg-button dark:bg-blue-300"
         />
-        <p>
+        <p class="max-sm:text-xs">
           {{ $t("about.features.equipment") }}
         </p>
       </div>
@@ -25,10 +25,10 @@
       <div class="flex gap-5 items-center">
         <UIcon
           name="i-lucide-activity"
-          size="24"
+          :size="isOnMobile ? 20 : 24"
           class="bg-button dark:bg-blue-300"
         />
-        <p>
+        <p class="max-sm:text-xs">
           {{ $t("about.features.activity") }}
         </p>
       </div>
@@ -36,13 +36,22 @@
       <div class="flex gap-5 items-center">
         <UIcon
           name="i-lucide-heart"
-          size="24"
+          :size="isOnMobile ? 20 : 24"
           class="bg-button dark:bg-blue-300"
         />
-        <p>
+        <p class="max-sm:text-xs">
           {{ $t("about.features.health") }}
         </p>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+const isOnMobile = ref(false);
+onMounted(() => {
+  if (window.innerWidth <= 640) {
+    isOnMobile.value = true;
+  }
+});
+</script>

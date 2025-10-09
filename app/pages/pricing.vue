@@ -3,7 +3,9 @@
     class="min-h-screen flex justify-center items-center flex-col gap-10 pt-20"
   >
     <!-- Hero Section -->
-    <div class="flex w-full max-w-4xl gap-5 justify-center items-center">
+    <div
+      class="flex w-full max-w-4xl gap-5 justify-center items-center max-sm:px-3"
+    >
       <div class="flex flex-col items-center justify-center text-center gap-3">
         <h1 class="text-gray-900 dark:text-white">
           {{ $t("pricing.title") }}
@@ -22,7 +24,7 @@
 
     <!-- Subscription Plans Section -->
     <div class="w-full flex items-center justify-center">
-      <div class="flex pb-10 max-sm:pb-5 flex-col gap-1 max-w-4xl px-4 md:px-0">
+      <div class="flex pb-10 max-sm:pb-5 flex-col gap-1 max-w-4xl max-sm:px-3">
         <!-- Billing Toggle -->
         <div class="flex justify-center pb-7">
           <div
