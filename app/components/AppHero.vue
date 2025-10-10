@@ -1,5 +1,8 @@
 <template>
-  <div id="home" class="flex w-full h-screen justify-center items-center">
+  <div
+    id="home"
+    class="flex w-full h-[calc(100vh-73px)] justify-center items-center"
+  >
     <div
       class="flex flex-col items-center justify-center max-w-3xl text-center gap-10 py-20 px-4 sm:px-6 lg:px-8"
     >

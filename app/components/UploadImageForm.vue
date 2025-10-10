@@ -23,7 +23,7 @@
         />
         <div v-else class="flex justify-center items-center gap-3">
           <UIcon name="i-lucide-upload" size="24" class="mb-2" />
-          <span class="text-sm"> {{ $t("upload-button") }}</span>
+          <span class="text-sm"> {{ $t("demo.upload-button") }}</span>
         </div>
       </div>
     </div>

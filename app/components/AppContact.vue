@@ -1,7 +1,7 @@
 <template>
   <div
     id="contact"
-    class="flex w-full h-[calc(100vh-127px)] justify-center items-center max-sm:px-3"
+    class="flex w-full h-[calc(100vh-73px)] justify-center items-center max-sm:px-3"
   >
     <UForm
       :schema="schema"
