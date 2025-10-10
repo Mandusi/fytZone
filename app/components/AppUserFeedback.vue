@@ -8,7 +8,7 @@
         :key="index"
         variant="subtle"
         :description="testimonial.quote"
-        class="w-84 h-64 max-sm:w-72 max-sm:h-60 !m-0"
+        class="w-84 h-64 max-sm:w-full max-sm:h-fit max-sm:py-3"
       >
         <template #footer>
           <UUser
