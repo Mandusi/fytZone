@@ -11,6 +11,7 @@
         <BlogCard
           v-for="post in posts"
           :key="post.title"
+          :url="post.url"
           :title="post.title"
           :content="post.content"
           :image-url="post.imageUrl"
@@ -26,31 +27,37 @@ const { t } = useI18n();
 const posts = [
   {
     title: t("blogPosts.bestBudgetEquipment.title"),
+    url: "best-budget-equipment-for-home-gyms",
     content: t("blogPosts.bestBudgetEquipment.description"),
     imageUrl: "/blog/best-budget-equipment.jpg",
   },
   {
     title: t("blogPosts.apartmentFitness.title"),
+    url: "apartment-fitness-ideas",
     content: t("blogPosts.apartmentFitness.description"),
     imageUrl: "/blog/small-apartment-fitness-ideas.png",
   },
   {
     title: t("blogPosts.homeGymSetup.title"),
+    url: "home-gym-setup-tips",
     content: t("blogPosts.homeGymSetup.description"),
     imageUrl: "/blog/home-gym-setup-tips.png",
   },
   {
     title: t("blogPosts.bodyweightExercises.title"),
+    url: "effective-bodyweight-exercises",
     content: t("blogPosts.bodyweightExercises.description"),
     imageUrl: "/blog/effective-bodyweight-exercises.png",
   },
   {
     title: t("blogPosts.nutritionTips.title"),
+    url: "nutrition-tips-for-fitness",
     content: t("blogPosts.nutritionTips.description"),
     imageUrl: "/blog/nutrition-tips-for-fitness.png",
   },
   {
     title: t("blogPosts.stayingMotivated.title"),
+    url: "staying-motivated-to-exercise",
     content: t("blogPosts.stayingMotivated.description"),
     imageUrl: "/blog/staying-motivated-to-exercise.png",
   },

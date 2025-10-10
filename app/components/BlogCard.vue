@@ -3,14 +3,7 @@
     :title="title"
     :image="imageUrl"
     class="h-full w-full bg-secondary-bg rounded-xl overflow-hidden transition-all cursor-pointer"
-    @click="
-      navigateTo(
-        `/blog/${title
-          .toLowerCase()
-          .replace(/ /g, '-')
-          .replace(/[^\w-]+/g, '')}`
-      )
-    "
+    @click="navigateTo(`/blog/${url}`)"
   >
     <div>
       <img :src="imageUrl" :alt="title" class="w-full object-cover" />
@@ -28,6 +21,7 @@
 <script setup>
 const props = defineProps({
   title: { type: String, required: true },
+  url: { type: String, required: true },
   content: { type: String, required: true },
   imageUrl: { type: String, required: true },
 });
