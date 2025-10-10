@@ -21,20 +21,33 @@
             label="Generate My Gym"
             icon="i-lucide-sparkles"
             size="xl"
-            class="px-20 py-3 text-white cursor-pointer !bg-button rounded-full disabled:!bg-muted"
+            class="px-20 py-3 cursor-pointer w-full justify-center md:w-fit text-white !bg-button disabled:text-secondary-text rounded-full disabled:!bg-secondary-bg hover:!bg-button/90"
             :disabled="!Form?.inputFile || !Form?.activity"
             @click="generate"
           />
         </div>
       </div>
 
-      <ComparisonSlider
-        :images="
-          inputImage && resultImage
-            ? { before: inputImage, after: resultImage }
-            : null
-        "
-      />
+      <div class="relative">
+        <ComparisonSlider
+          :images="
+            inputImage && resultImage
+              ? { before: inputImage, after: resultImage }
+              : null
+          "
+        />
+
+        <UButton
+          v-if="resultImage"
+          @click="download"
+          download="fytzone-ai-generated-gym.png"
+          icon="i-lucide-download"
+          size="md"
+          variant="soft"
+          color="neutral"
+          class="absolute right-3 top-3 rounded-lg"
+        />
+      </div>
 
       <LoadingAnimation :show="isLoading" />
     </div>
@@ -68,5 +81,14 @@ async function generate() {
   } finally {
     isLoading.value = false;
   }
+}
+
+function download() {
+  if (!resultImage.value) return;
+
+  const link = document.createElement("a");
+  link.href = resultImage.value;
+  link.download = "fytzone-ai-generated-gym.png";
+  link.click();
 }
 </script>
