@@ -8,7 +8,7 @@
       'bg-bg-primary': true,
     }"
   >
-    <div class="flex items-center max-w-4xl justify-between w-full">
+    <div class="flex items-center max-w-5xl justify-between w-full">
       <div class="flex items-center">
         <img
           :src="
@@ -123,6 +123,15 @@
           >
             {{ $t("nav.pricing") }}
           </NuxtLink>
+          <NuxtLink
+            to="/partnership"
+            class="hover:text-accent-blue text-lg font-medium py-2"
+            active-class="text-accent-blue"
+            :class="{ 'text-text-primary': true }"
+            @click="closeMobileMenu"
+          >
+            {{ $t("nav.partnership") }}
+          </NuxtLink>
         </nav>
 
         <!-- Mobile Menu Footer -->
@@ -165,7 +174,7 @@
       </div>
 
       <nav
-        class="gap-6 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
+        class="gap-2 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
       >
         <NuxtLink
           to="/#home"
@@ -188,6 +197,14 @@
           :class="{ 'text-text-primary': true }"
         >
           {{ $t("nav.contact") }}
+        </NuxtLink>
+        <NuxtLink
+          to="/blog"
+          class="hover:text-accent-blue"
+          active-class="text-accent-blue"
+          :class="{ 'text-text-primary': true }"
+        >
+          {{ $t("nav.blog") }}
         </NuxtLink>
         <NuxtLink
           to="/pricing"

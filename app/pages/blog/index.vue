@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full min-h-screen justify-center">
+  <div class="flex w-full min-h-[100vh-127px] justify-center">
     <div class="max-w-4xl flex flex-col gap-10 justify-start items-center py-3">
       <div class="w-full p-3 md:p-0 grid grid-cols-2 md:grid-cols-3 gap-3">
         <blog-card
@@ -21,42 +21,38 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
+
 const posts = [
   {
-    title: "Best Budget Equipment for Home Gyms",
-    content:
-      "Discover the best budget-friendly equipment for building an effective home gym. Learn how to create a space-friendly workout setup without breaking the bank.",
+    title: t("blogPosts.bestBudgetEquipment.title"),
+    content: t("blogPosts.bestBudgetEquipment.description"),
     imageUrl: "/blog/best-budget-equipment.jpg",
   },
   {
-    title: "Apartment Fitness Ideas",
-    content:
-      "Discover creative apartment fitness ideas to stay active and healthy in small spaces. Learn how to make the most of your apartment for effective workouts.",
+    title: t("blogPosts.apartmentFitness.title"),
+    content: t("blogPosts.apartmentFitness.description"),
     imageUrl: "/blog/small-apartment-fitness-ideas.png",
   },
   {
-    title: "Home Gym Setup Tips",
-    content:
-      "Learn essential home gym setup tips to create an efficient and motivating workout space. Discover how to optimize your home gym for better fitness results.",
-    imageUrl: "/blog/small-apartment-fitness-ideas.png",
+    title: t("blogPosts.homeGymSetup.title"),
+    content: t("blogPosts.homeGymSetup.description"),
+    imageUrl: "/blog/home-gym-setup-tips.png",
   },
   {
-    title: "Effective Bodyweight Exercises",
-    content:
-      "Explore effective bodyweight exercises that you can do anywhere. Learn how to build strength and endurance without any equipment.",
-    imageUrl: "/blog/small-apartment-fitness-ideas.png",
+    title: t("blogPosts.bodyweightExercises.title"),
+    content: t("blogPosts.bodyweightExercises.description"),
+    imageUrl: "/blog/effective-bodyweight-exercises.png",
   },
   {
-    title: "Nutrition Tips for Fitness",
-    content:
-      "Get essential nutrition tips to support your fitness goals. Learn how to fuel your body for optimal performance and recovery.",
-    imageUrl: "/blog/small-apartment-fitness-ideas.png",
+    title: t("blogPosts.nutritionTips.title"),
+    content: t("blogPosts.nutritionTips.description"),
+    imageUrl: "/blog/nutrition-tips-for-fitness.png",
   },
   {
-    title: "Staying Motivated to Exercise",
-    content:
-      "Discover strategies to stay motivated and consistent with your exercise routine. Learn how to overcome common challenges and keep pushing towards your fitness goals.",
-    imageUrl: "/blog/small-apartment-fitness-ideas.png",
+    title: t("blogPosts.stayingMotivated.title"),
+    content: t("blogPosts.stayingMotivated.description"),
+    imageUrl: "/blog/staying-motivated-to-exercise.png",
   },
 ];
 </script>

@@ -8,9 +8,10 @@
   </div>
 </template>
 <script setup>
+const { t } = useI18n();
+
 useSeoMeta({
   title: "Apartment Fitness Ideas - FytZone",
-  description:
-    "Discover creative apartment fitness ideas to stay active and healthy in small spaces. Learn how to make the most of your apartment for effective workouts.",
+  description: t("blogPosts.apartmentFitness.seoDescription"),
 });
 </script>

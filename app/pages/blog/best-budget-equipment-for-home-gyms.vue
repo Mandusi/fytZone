@@ -8,9 +8,10 @@
   </div>
 </template>
 <script setup>
+const { t } = useI18n();
+
 useSeoMeta({
   title: "Best Budget Equipment for Home Gyms - FytZone",
-  description:
-    "Discover the best budget-friendly equipment for building an effective home gym. Learn how to create a space-friendly workout setup without breaking the bank.",
+  description: t("blogPosts.bestBudgetEquipment.seoDescription"),
 });
 </script>

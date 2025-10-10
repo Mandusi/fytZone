@@ -2,7 +2,7 @@
   <div
     :title="title"
     :image="imageUrl"
-    class="h-full w-full bg-secondary-bg rounded-xl overflow-hidden transition-all"
+    class="h-full w-full bg-secondary-bg rounded-xl overflow-hidden transition-all cursor-pointer"
     @click="
       navigateTo(
         `/blog/${title

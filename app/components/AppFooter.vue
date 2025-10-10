@@ -39,6 +39,30 @@
               {{ $t("nav.contact") }}
             </NuxtLink>
             <NuxtLink
+              to="/blog"
+              class="hover:text-accent-blue max-sm:hidden"
+              active-class="text-accent-blue"
+              :class="{ 'text-text-primary': true }"
+            >
+              {{ $t("nav.blog") }}
+            </NuxtLink>
+            <NuxtLink
+              to="/pricing"
+              class="hover:text-accent-blue max-sm:hidden"
+              active-class="text-accent-blue"
+              :class="{ 'text-text-primary': true }"
+            >
+              {{ $t("nav.pricing") }}
+            </NuxtLink>
+            <NuxtLink
+              to="/partnership"
+              class="hover:text-accent-blue max-sm:hidden"
+              active-class="text-accent-blue"
+              :class="{ 'text-text-primary': true }"
+            >
+              {{ $t("nav.partnership") }}
+            </NuxtLink>
+            <NuxtLink
               to="/privacy"
               class="hover:text-accent-blue"
               :class="{ 'text-text-primary': true }"
@@ -50,7 +74,7 @@
       </div>
       <div>
         <p class="text-muted-text max-sm:text-xs text-center">
-          Copyright © 2025 FytZone. All rights reserved.
+          {{ $t("common.copyright") }}
         </p>
       </div>
     </div>

@@ -24,12 +24,14 @@
 <script setup lang="ts">
 defineProps<{ show: boolean }>();
 
+const { t } = useI18n();
+
 const steps = [
-  "Analyzing your room layout…",
-  "Detecting available space for gym equipment…",
-  "Matching workout styles with design preferences…",
-  "Generating personalized fitness zone with AI…",
-  "Finalizing a fully decorated gym for you 🚀",
+  t("loading.steps.analyzing"),
+  t("loading.steps.detecting"),
+  t("loading.steps.matching"),
+  t("loading.steps.generating"),
+  t("loading.steps.finalizing"),
 ];
 
 const currentStep = ref(steps[0]);

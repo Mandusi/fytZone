@@ -189,12 +189,7 @@ const plans: PricingPlan[] = [
     yearlyPrice: 0,
     period: "month",
     type: "subscription",
-    features: [
-      "basic.design",
-      "basic.layouts",
-      "basic.support",
-      "basic.exports",
-    ],
+    features: ["basic.design", "basic.support", "basic.exports"],
   },
   {
     name: "professional",
