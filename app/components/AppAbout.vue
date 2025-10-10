@@ -44,58 +44,61 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-col gap-4 max-w-4xl">
-      <UMarquee
-        pause-on-hover
-        :overlay="false"
-        :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
-      >
-        <UPageCard
-          v-for="(testimonial, index) in testimonials"
-          :key="index"
-          variant="subtle"
-          :description="testimonial.quote"
-          :ui="{
-            description:
-              'before:content-[open-quote] after:content-[close-quote] line-clamp-3',
-          }"
-          class="w-64 shrink-0"
+    <div class="w-full max-w-screen mx-auto overflow-hidden px-4">
+      <div class="flex flex-col gap-4">
+        <UMarquee
+          pause-on-hover
+          :overlay="false"
+          :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
         >
-          <template #footer>
-            <UUser
-              v-bind="testimonial.user"
-              size="xl"
-              :ui="{ description: 'line-clamp-1' }"
-            />
-          </template>
-        </UPageCard>
-      </UMarquee>
-      <UMarquee
-        pause-on-hover
-        reverse
-        :overlay="false"
-        :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
-      >
-        <UPageCard
-          v-for="(testimonial, index) in testimonials"
-          :key="index"
-          variant="subtle"
-          :description="testimonial.quote"
-          :ui="{
-            description:
-              'before:content-[open-quote] after:content-[close-quote] line-clamp-3',
-          }"
-          class="w-64 shrink-0"
+          <UPageCard
+            v-for="(testimonial, index) in testimonials"
+            :key="index"
+            variant="subtle"
+            :description="testimonial.quote"
+            :ui="{
+              description:
+                'before:content-[open-quote] after:content-[close-quote] line-clamp-3',
+            }"
+            class="w-64 shrink-0"
+          >
+            <template #footer>
+              <UUser
+                v-bind="testimonial.user"
+                size="xl"
+                :ui="{ description: 'line-clamp-1' }"
+              />
+            </template>
+          </UPageCard>
+        </UMarquee>
+        <UMarquee
+          v-if="!isOnMobile"
+          pause-on-hover
+          reverse
+          :overlay="false"
+          :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
         >
-          <template #footer>
-            <UUser
-              v-bind="testimonial.user"
-              size="xl"
-              :ui="{ description: 'line-clamp-1' }"
-            />
-          </template>
-        </UPageCard>
-      </UMarquee>
+          <UPageCard
+            v-for="(testimonial, index) in testimonials"
+            :key="index"
+            variant="subtle"
+            :description="testimonial.quote"
+            :ui="{
+              description:
+                'before:content-[open-quote] after:content-[close-quote] line-clamp-3',
+            }"
+            class="w-64 shrink-0"
+          >
+            <template #footer>
+              <UUser
+                v-bind="testimonial.user"
+                size="xl"
+                :ui="{ description: 'line-clamp-1' }"
+              />
+            </template>
+          </UPageCard>
+        </UMarquee>
+      </div>
     </div>
   </div>
 </template>
