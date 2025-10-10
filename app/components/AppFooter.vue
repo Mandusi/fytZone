@@ -10,6 +10,7 @@
           <UButton
             icon="i-lucide-sparkles"
             class="px-5 py-2 text-white bg-button hover:bg-blue-700 rounded-full max-sm:px-3 max-sm:py-1 max-sm:text-sm"
+            color="secondary"
             @click="$router.push('/demo')"
           >
             {{ $t("nav.tryNow") }}

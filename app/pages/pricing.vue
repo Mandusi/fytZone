@@ -10,7 +10,7 @@
         <h1 class="text-gray-900 dark:text-white">
           {{ $t("pricing.title") }}
           <span
-            class="bg-gradient-to-b from-blue-600 to-purple-600 text-transparent bg-clip-text"
+            class="bg-gradient-to-b from-blue-600 to-gradient-end text-transparent bg-clip-text"
           >
             {{ $t("pricing.titleHighlight") }}
           </span>
@@ -75,7 +75,7 @@
               class="absolute -top-4 left-1/2 transform -translate-x-1/2"
             >
               <span
-                class="bg-gradient-to-r from-blue-600 to-purple-600 text-white whitespace-nowrap px-6 py-2 rounded-full text-sm font-semibold"
+                class="bg-gradient-to-r from-blue-600 to-gradient-end text-white whitespace-nowrap px-6 py-2 rounded-full text-sm font-semibold"
               >
                 {{ $t("pricing.popular") }}
               </span>
@@ -142,6 +142,7 @@
             <UButton
               :variant="plan.popular ? 'solid' : 'outline'"
               size="lg"
+              color="secondary"
               class="w-full font-semibold flex justify-center"
               :class="
                 plan.popular

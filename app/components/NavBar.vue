@@ -10,14 +10,13 @@
   >
     <div class="flex items-center max-w-4xl justify-between w-full">
       <div class="flex items-center">
-        <div class="flex gap-3 items-center justify-center">
-          <UIcon
-            name="i-lucide-menu"
-            size="24"
-            class="mr-3 cursor-pointer"
-            @click="toggleMobileMenu"
-          />
-        </div>
+        <img
+          :src="
+            colorMode.value === 'dark' ? '/logo-white.svg' : '/logo-black.svg'
+          "
+          alt="logo"
+          class="h-7"
+        />
       </div>
       <div class="flex items-center gap-2">
         <div
@@ -53,21 +52,13 @@
           />
         </UDropdownMenu>
 
-        <div
-          class="flex items-center gap-2 border px-3 py-1 max-sm:border-none max-sm:p-0 rounded-full hover:shadow-md transition-shadow duration-200"
-        >
-          <NuxtLink
-            to="/demo"
-            class="font-medium hover:gradient-text whitespace-nowrap flex items-center gap-1"
-            :class="{
-              'border-gray-300 dark:border-gray-700 text-text-primary': true,
-            }"
-          >
-            <span class="max-sm:hidden">
-              {{ $t("nav.tryNow") }}
-            </span>
-            <UIcon name="i-lucide-sparkles" size="16" />
-          </NuxtLink>
+        <div class="flex gap-3 items-center justify-center">
+          <UIcon
+            name="i-lucide-menu"
+            size="24"
+            class="mr-3 cursor-pointer"
+            @click="toggleMobileMenu"
+          />
         </div>
       </div>
     </div>
@@ -88,15 +79,8 @@
       >
         <!-- Mobile Menu Header -->
         <div
-          class="flex items-center justify-between p-5 border-b border-gray-200 dark:border-gray-700"
+          class="flex items-center justify-end p-5 border-b border-gray-200 dark:border-gray-700"
         >
-          <img
-            :src="
-              colorMode.value === 'dark' ? '/logo-white.svg' : '/logo-black.svg'
-            "
-            alt="logo"
-            class="h-8"
-          />
           <UIcon
             name="i-lucide-x"
             size="24"
@@ -148,6 +132,7 @@
           <UButton
             icon="i-lucide-sparkles"
             class="flex justify-center items-center text-white bg-button rounded-full px-3 py-1 text-sm"
+            color="secondary"
             @click="$router.push('/demo')"
           >
             {{ $t("nav.tryNow") }}
@@ -250,7 +235,8 @@
 
         <UButton
           icon="i-lucide-sparkles"
-          class="px-5 py-2 text-white bg-button hover:bg-blue-700 rounded-full max-sm:px-3 max-sm:py-1 max-sm:text-sm"
+          class="px-5 py-2 text-white bg-button rounded-full max-sm:px-3 max-sm:py-1 max-sm:text-sm"
+          color="secondary"
           @click="$router.push('/demo')"
         >
           {{ $t("nav.tryNow") }}

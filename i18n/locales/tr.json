@@ -20,6 +20,48 @@
       "equipment": "Maksimum güvenlik ve verimlilik için akıllı ekipman yerleştirme ve aralık optimizasyonu.",
       "activity": "Fitness hedefleriniz ve mevcut alanınıza dayalı kişiselleştirilmiş düzen önerileri.",
       "health": "Daha iyi antrenmanlar ve daha hızlı iyileşme sağlayan sağlık odaklı tasarım ilkeleri."
+    },
+    "testimonials": {
+      "sarahMitchell": {
+        "name": "Sarah Mitchell",
+        "description": "Kişisel Antrenör & Ev Spor Salonu Sahibi",
+        "quote": "FytZone küçük dairemi tamamen verimli bir antrenman alanına dönüştürdü. AI mükemmel ekipman yerleşimini önerdi ve şimdi hiç yeterince büyük olduğunu düşünmediğim bir alanda tüm müşterilerimi eğitebiliyorum."
+      },
+      "marcusRodriguez": {
+        "name": "Marcus Rodriguez",
+        "description": "Fitness Tutkunu & Yazılım Mühendisi",
+        "quote": "Tüm spor ekipmanlarımı garajıma sığdırmakta zorlanıyordum. FytZone'un AI düzen önerileri her santimetreyi maksimize etti. Şimdi uygun güvenlik aralıklarıyla eksiksiz bir spor salonu kurulumuna sahibim."
+      },
+      "emmaChen": {
+        "name": "Emma Chen",
+        "description": "Yoga Eğitmeni & Wellness Koçu",
+        "quote": "AI, uygun akış ve aydınlatmaya sahip sakinleştirici bir yoga alanına olan ihtiyacımı mükemmel bir şekilde anladı. FytZone, öğrencilerimin kesinlikle sevdiği huzurlu bir ortam yaratmama yardımcı oldu."
+      },
+      "jakeThompson": {
+        "name": "Jake Thompson",
+        "description": "CrossFit Sporcusu & Spor Salonu Sahibi",
+        "quote": "Kendi CrossFit salonumu açmak bir hayaldi, ancak düzeni tasarlamak bunaltıcıydı. FytZone'un AI'sı, fonksiyonel hareket alanını maksimize eden optimal bir kat planı oluşturdu."
+      },
+      "lisaPark": {
+        "name": "Dr. Lisa Park",
+        "description": "Fizyoterapist & Rehabilitasyon Uzmanı",
+        "quote": "FytZone, hastalarım için hem fonksiyonel hem de davetkar bir rehabilitasyon alanı tasarlamama yardımcı oldu. AI, erişilebilirlik gereksinimlerini dikkate aldı ve farklı terapi aktiviteleri için bölgeler oluşturdu."
+      },
+      "alexRivera": {
+        "name": "Alex Rivera",
+        "description": "Vücut Geliştirme Yarışmacısı",
+        "quote": "Ciddi bir vücut geliştiricisi olarak, ağır kaldırmaları kaldırabilecek bir ev spor salonuna ihtiyacım vardı. FytZone'un AI'sı, uygun ekipman aralıkları ve güvenlik düşünceleriyle mükemmel powerlifting kurulumunu tasarladı."
+      },
+      "rachelFoster": {
+        "name": "Rachel Foster",
+        "description": "Yoğun Anne & Fitness Bloggeri",
+        "quote": "Üç çocuk ve sınırlı alanla, bir ev spor salonunun imkansız olduğunu düşünüyordum. FytZone bana oyun odasının da işlevini gören çok fonksiyonlu bir fitness alanı nasıl yaratacağımı gösterdi."
+      },
+      "carlosMartinez": {
+        "name": "Carlos Martinez",
+        "description": "Kurumsal Wellness Koordinatörü",
+        "quote": "FytZone, ofis wellness odamızı çalışanlar için ilgi çekici bir fitness alanına dönüştürmemize yardımcı oldu. AI, grup dersleri ve bireysel antrenmanlar için düzeni optimize etti."
+      }
     }
   },
   "contact": {

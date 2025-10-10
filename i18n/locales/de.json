@@ -20,6 +20,48 @@
       "equipment": "Intelligente Geräteaufstellung und Abstandsoptimierung für maximale Sicherheit und Effizienz.",
       "activity": "Personalisierte Layout-Empfehlungen basierend auf Ihren Fitnesszielen und verfügbarem Platz.",
       "health": "Gesundheitsorientierte Designprinzipien, die bessere Workouts und schnellere Erholung fördern."
+    },
+    "testimonials": {
+      "sarahMitchell": {
+        "name": "Sarah Mitchell",
+        "description": "Personal Trainerin & Heimfitness-Studio Besitzerin",
+        "quote": "FytZone hat meine kleine Wohnung komplett in einen effizienten Trainingsbereich verwandelt. Die KI schlug die perfekte Geräteaufstellung vor, und jetzt kann ich alle meine Kunden in einem Raum trainieren, von dem ich nie dachte, dass er groß genug wäre."
+      },
+      "marcusRodriguez": {
+        "name": "Marcus Rodriguez",
+        "description": "Fitness-Enthusiast & Software-Ingenieur",
+        "quote": "Ich hatte Schwierigkeiten, all meine Fitnessgeräte in meiner Garage unterzubringen. FytZones KI-Layout-Vorschläge maximierten jeden Zentimeter Platz. Jetzt habe ich ein komplettes Fitness-Studio mit ordnungsgemäßen Sicherheitsabständen."
+      },
+      "emmaChen": {
+        "name": "Emma Chen",
+        "description": "Yoga-Lehrerin & Wellness-Coach",
+        "quote": "Die KI verstand perfekt mein Bedürfnis nach einem beruhigenden Yoga-Raum mit ordnungsgemäßem Flow und Beleuchtung. FytZone half mir, eine ruhige Umgebung zu schaffen, die meine Schüler absolut lieben."
+      },
+      "jakeThompson": {
+        "name": "Jake Thompson",
+        "description": "CrossFit-Athlet & Fitnessstudio-Besitzer",
+        "quote": "Die Eröffnung meines eigenen CrossFit-Studios war ein Traum, aber das Layout zu entwerfen war überwältigend. FytZones KI erstellte einen optimalen Grundriss, der den funktionalen Bewegungsraum maximiert."
+      },
+      "lisaPark": {
+        "name": "Dr. Lisa Park",
+        "description": "Physiotherapeutin & Rehabilitations-Spezialistin",
+        "quote": "FytZone half mir, einen Rehabilitationsraum zu entwerfen, der sowohl funktional als auch einladend für meine Patienten ist. Die KI berücksichtigte Barrierefreiheits-Anforderungen und erstellte Zonen für verschiedene Therapieaktivitäten."
+      },
+      "alexRivera": {
+        "name": "Alex Rivera",
+        "description": "Bodybuilding-Wettkämpfer",
+        "quote": "Als ernsthafter Bodybuilder brauchte ich ein Heimfitness-Studio, das schweres Heben bewältigen kann. FytZones KI entwarf das perfekte Powerlifting-Setup mit ordnungsgemäßen Geräteabständen und Sicherheitsüberlegungen."
+      },
+      "rachelFoster": {
+        "name": "Rachel Foster",
+        "description": "Beschäftigte Mutter & Fitness-Bloggerin",
+        "quote": "Mit drei Kindern und begrenztem Platz dachte ich, ein Heimfitness-Studio wäre unmöglich. FytZone zeigte mir, wie ich einen multifunktionalen Fitnessbereich schaffen kann, der auch als Spielzimmer dient."
+      },
+      "carlosMartinez": {
+        "name": "Carlos Martinez",
+        "description": "Betriebliches Wellness-Koordinator",
+        "quote": "FytZone half uns, unseren Büro-Wellness-Raum in einen ansprechenden Fitnessbereich für Mitarbeiter zu verwandeln. Die KI optimierte das Layout für Gruppenkurse und individuelle Workouts."
+      }
     }
   },
   "contact": {

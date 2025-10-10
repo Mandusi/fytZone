@@ -20,6 +20,48 @@
       "equipment": "Smart equipment placement and spacing optimization for maximum safety and efficiency.",
       "activity": "Personalized layout recommendations based on your fitness goals and available space.",
       "health": "Health-focused design principles that promote better workouts and faster recovery."
+    },
+    "testimonials": {
+      "sarahMitchell": {
+        "name": "Sarah Mitchell",
+        "description": "Personal Trainer & Home Gym Owner",
+        "quote": "FytZone completely transformed my small apartment into an efficient workout space. The AI suggested the perfect equipment placement, and now I can train all my clients in a space I never thought was big enough."
+      },
+      "marcusRodriguez": {
+        "name": "Marcus Rodriguez",
+        "description": "Fitness Enthusiast & Software Engineer",
+        "quote": "I was struggling to fit all my gym equipment in my garage. FytZone's AI layout suggestions maximized every inch of space. Now I have a complete gym setup with proper spacing for safety."
+      },
+      "emmaChen": {
+        "name": "Emma Chen",
+        "description": "Yoga Instructor & Wellness Coach",
+        "quote": "The AI perfectly understood my need for a calming yoga space with proper flow and lighting. FytZone helped me create a serene environment that my students absolutely love."
+      },
+      "jakeThompson": {
+        "name": "Jake Thompson",
+        "description": "CrossFit Athlete & Gym Owner",
+        "quote": "Opening my own CrossFit box was a dream, but designing the layout was overwhelming. FytZone's AI created an optimal floor plan that maximizes functional movement space."
+      },
+      "lisaPark": {
+        "name": "Dr. Lisa Park",
+        "description": "Physical Therapist & Rehabilitation Specialist",
+        "quote": "FytZone helped me design a rehabilitation space that's both functional and welcoming for my patients. The AI considered accessibility requirements and created zones for different therapy activities."
+      },
+      "alexRivera": {
+        "name": "Alex Rivera",
+        "description": "Bodybuilding Competitor",
+        "quote": "As a serious bodybuilder, I needed a home gym that could handle heavy lifting. FytZone's AI designed the perfect powerlifting setup with proper equipment spacing and safety considerations."
+      },
+      "rachelFoster": {
+        "name": "Rachel Foster",
+        "description": "Busy Mom & Fitness Blogger",
+        "quote": "With three kids and limited space, I thought a home gym was impossible. FytZone showed me how to create a multi-functional fitness area that doubles as a playroom."
+      },
+      "carlosMartinez": {
+        "name": "Carlos Martinez",
+        "description": "Corporate Wellness Coordinator",
+        "quote": "FytZone helped us transform our office wellness room into an engaging fitness space for employees. The AI optimized the layout for group classes and individual workouts."
+      }
     }
   },
   "contact": {
