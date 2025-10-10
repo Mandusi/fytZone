@@ -302,5 +302,21 @@
   },
   "common": {
     "language": "Language"
+  },
+  "demo": {
+    "title": "Build Your Personal Gym with FytZone",
+    "subtitle": "Specify your desired working area and simply upload an image and let FytZone AI design your Gym",
+    "upload-title": "Upload an image of your workout area",
+    "upload-button": "Upload Image",
+    "activities-title": "How do you want to use this area?",
+    "bodybuilding": "Bodybuilding",
+    "bodybuilding-desc": "Focused on building muscle size, strength, and definition through weightlifting and structured resistance training.",
+    "cardio": "Cardio",
+    "cardio-desc": "Emphasizes cardiovascular endurance and overall fitness through activities like running, cycling, and high-intensity interval training (HIIT).",
+    "yoga": "Yoga / Pilates",
+    "yoga-desc": "Combines physical postures, breathing exercises, and meditation to enhance flexibility, strength, and mental well-being.",
+    "crossfit": "Crossfit / Calisthenics",
+    "crossfit-desc": "A high-intensity fitness program that incorporates functional movements, weightlifting, and bodyweight exercises to improve overall strength and conditioning.",
+    "generate-button": "Generate My Gym Design"
   }
 }

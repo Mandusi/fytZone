@@ -302,5 +302,27 @@
   },
   "common": {
     "language": "Dil"
+  },
+
+  "demo": {
+    "title": "FytZone ile Kendi Spor Salonunu Kur",
+    "subtitle": "Alanını belirle, bir fotoğraf yükle ve FytZone AI hayalindeki antrenman alanını senin için tasarlasın.",
+    "upload-title": "Antrenman Alanının Fotoğrafını Yükle",
+    "upload-button": "Fotoğraf Yükle",
+    "activities-title": "Bu alanı nasıl kullanmak istiyorsun?",
+
+    "bodybuilding": "Vücut Geliştirme",
+    "bodybuilding-desc": "Ağırlık çalışmaları ve planlı direnç antrenmanlarıyla kas hacmini, gücünü ve formunu geliştir.",
+
+    "cardio": "Kardiyo",
+    "cardio-desc": "Koşu, bisiklet ve yüksek yoğunluklu interval antrenman (HIIT) ile dayanıklılığını ve kalp sağlığını artır.",
+
+    "yoga": "Yoga / Pilates",
+    "yoga-desc": "Yoga duruşları, pilates akışları ve nefes egzersizleriyle esnekliğini, merkez gücünü ve farkındalığını geliştir.",
+
+    "crossfit": "Crossfit / Calisthenics",
+    "crossfit-desc": "Fonksiyonel hareketler, vücut ağırlığı egzersizleri ve kuvvet antrenmanlarıyla yüksek yoğunluklu bir şekilde kendini zorla.",
+
+    "generate-button": "Spor Salonumu Tasarla"
   }
 }

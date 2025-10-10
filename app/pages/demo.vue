@@ -5,10 +5,11 @@
         class="flex flex-col md:flex-row justify-center gap-4 items-center md:justify-between md:items-end"
       >
         <div class="text-center md:text-left">
-          <h3 class="text-black dark:text-primary-text">Build your DIY Gym</h3>
+          <h3 class="text-black dark:text-primary-text">
+            {{ $t("demo.title") }}
+          </h3>
           <p>
-            Specify your desired working area and simply upload an image and let
-            FytZone AI design your Gym
+            {{ $t("demo.subtitle") }}
           </p>
         </div>
       </div>
@@ -18,7 +19,7 @@
 
         <div class="flex justify-center w-full">
           <UButton
-            label="Generate My Gym"
+            :label="$t('demo.generate-button')"
             icon="i-lucide-sparkles"
             size="xl"
             class="px-20 py-3 cursor-pointer w-full justify-center md:w-fit text-white !bg-button disabled:text-secondary-text rounded-full disabled:!bg-secondary-bg hover:!bg-button/90"

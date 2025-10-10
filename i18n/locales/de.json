@@ -302,5 +302,26 @@
   },
   "common": {
     "language": "Sprache"
+  },
+  "demo": {
+    "title": "Baue Dein Eigenes Fitnessstudio mit FytZone",
+    "subtitle": "Definiere deinen Bereich, lade ein Foto hoch und lass FytZone AI deinen Traum-Trainingsraum gestalten.",
+    "upload-title": "Lade ein Bild deines Trainingsbereichs hoch",
+    "upload-button": "Bild Hochladen",
+    "activities-title": "Wie möchtest du diesen Bereich nutzen?",
+
+    "bodybuilding": "Bodybuilding",
+    "bodybuilding-desc": "Steigere Muskelmasse, Kraft und Definition mit strukturiertem Krafttraining und Gewichtheben.",
+
+    "cardio": "Cardio",
+    "cardio-desc": "Verbessere Ausdauer und Herzgesundheit durch Laufen, Radfahren und hochintensives Intervalltraining (HIIT).",
+
+    "yoga": "Yoga / Pilates",
+    "yoga-desc": "Fördere Flexibilität, Core-Stärke und Achtsamkeit mit Yoga-Übungen, Pilates-Flows und Atemtechniken.",
+
+    "crossfit": "Crossfit / Calisthenics",
+    "crossfit-desc": "Fordere dich heraus mit hochintensiven funktionellen Bewegungen, Bodyweight-Training und Kraftübungen.",
+
+    "generate-button": "Mein Fitnessstudio Entwerfen"
   }
 }

@@ -10,7 +10,7 @@
 
     <div class="flex flex-col gap-2">
       <span class="font-medium text-lg">
-        Upload an image of your workout area
+        {{ $t("demo.upload-title") }}
       </span>
       <div
         @click="$refs.fileInput.click()"
@@ -23,14 +23,14 @@
         />
         <div v-else class="flex justify-center items-center gap-3">
           <UIcon name="i-lucide-upload" size="24" class="mb-2" />
-          <span class="text-sm"> Upload the image of your workout</span>
+          <span class="text-sm"> {{ $t("upload-button") }}</span>
         </div>
       </div>
     </div>
 
     <div class="flex flex-col gap-2">
       <span class="font-medium text-lg">
-        How do you want to use this area?
+        {{ $t("demo.activities-title") }}
       </span>
       <ActivitySelectInput v-model="activity" />
     </div>

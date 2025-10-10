@@ -2,32 +2,34 @@
   <div class="flex flex-col gap-3">
     <ActivitySelectInputItem
       v-model="selected"
-      label="Bodybuilding"
-      description="Focused on building muscle size, strength, and definition through weightlifting and structured resistance training."
+      :label="$t('demo.bodybuilding')"
+      :description="$t('demo.bodybuilding-desc')"
       icon="i-lucide-dumbbell"
     />
     <ActivitySelectInputItem
       v-model="selected"
-      label="Cardio"
-      description="Improves heart health, stamina, and endurance with activities like running, cycling, or HIIT workouts."
+      :label="$t('demo.cardio')"
+      :description="$t('demo.cardio-desc')"
       icon="i-lucide-heart-pulse"
     />
     <ActivitySelectInputItem
       v-model="selected"
-      label="Yoga / Pilates"
-      description="Enhances flexibility, balance, posture, and core strength while reducing stress and improving body awareness."
+      :label="$t('demo.yoga')"
+      :description="$t('demo.yoga-desc')"
       icon="i-lucide-brain"
     />
     <ActivitySelectInputItem
       v-model="selected"
-      label="CrossFit / Calisthenics"
-      description="A high-intensity, varied workout regimen combining weightlifting, cardio, and functional movements for overall fitness."
+      :label="$t('demo.crossfit')"
+      :description="$t('demo.crossfit-desc')"
       icon="i-lucide-biceps-flexed"
     />
   </div>
 </template>
 
 <script setup lang="ts">
+import { description } from "valibot";
+
 const props = defineProps({
   modelValue: { type: String, default: "" },
 });
