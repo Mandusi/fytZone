@@ -22,46 +22,9 @@
       </div>
 
       <nav
-        class="gap-2 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
+        class="gap-4 justify-center items-center hidden md:flex font-medium whitespace-nowrap"
       >
-        <NuxtLink
-          to="/#home"
-          class="hover:text-"
-          active-class="text-accent-blue"
-          :class="{ 'text-text-primary': true }"
-          >{{ $t("nav.home") }}</NuxtLink
-        >
-        <NuxtLink
-          to="/#about"
-          class="hover:text-accent-blue"
-          active-class="text-accent-blue"
-          :class="{ 'text-text-primary': true }"
-          >{{ $t("nav.about") }}</NuxtLink
-        >
-        <NuxtLink
-          to="/#contact"
-          class="hover:text-accent-blue"
-          active-class="text-accent-blue"
-          :class="{ 'text-text-primary': true }"
-        >
-          {{ $t("nav.contact") }}
-        </NuxtLink>
-        <NuxtLink
-          to="/blog"
-          class="hover:text-accent-blue"
-          active-class="text-accent-blue"
-          :class="{ 'text-text-primary': true }"
-        >
-          {{ $t("nav.blog") }}
-        </NuxtLink>
-        <NuxtLink
-          to="/pricing"
-          class="hover:text-accent-blue"
-          active-class="text-accent-blue"
-          :class="{ 'text-text-primary': true }"
-        >
-          {{ $t("nav.pricing") }}
-        </NuxtLink>
+        <NavLinks />
       </nav>
 
       <div class="flex items-center gap-2 justify-end">
