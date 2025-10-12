@@ -3,9 +3,10 @@
     <div class="max-w-4xl flex flex-col gap-10 justify-start items-center py-3">
       <div class="w-full p-3 md:p-0 grid grid-cols-2 md:grid-cols-3 gap-3">
         <blog-card
-          :title="posts[0].title"
-          :content="posts[0].content"
-          :image-url="posts[0].imageUrl"
+          :url="posts[posts.length - 1].url"
+          :title="posts[posts.length - 1].title"
+          :content="posts[posts.length - 1].content"
+          :image-url="posts[posts.length - 1].imageUrl"
           class="col-span-3 md:col-span-2"
         />
         <BlogCard
