@@ -1,7 +1,9 @@
 <template>
   <div class="flex w-full min-h-[100vh-127px] justify-center">
     <div class="max-w-4xl flex flex-col gap-10 justify-start items-center py-3">
-      <div class="w-full p-3 md:p-0 grid grid-cols-2 md:grid-cols-3 gap-3">
+      <div
+        class="w-full flex flex-col p-3 md:p-0 md:grid grid-cols-2 md:grid-cols-3 gap-3"
+      >
         <blog-card
           :url="posts[posts.length - 1].url"
           :title="posts[posts.length - 1].title"

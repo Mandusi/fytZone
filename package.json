@@ -10,27 +10,25 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "10.1.0",
     "@iconify-json/lucide": "^1.2.68",
     "@unhead/vue": "^2.0.3",
-    "better-sqlite3": "^12.4.1",
+    "valibot": "^1.1.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "nuxt": "^4.1.2",
+    "@nuxt/content": "3.7.1",
+    "@nuxt/image": "1.11.0",
+    "@nuxt/ui": "4.0.1",
+    "@nuxt/eslint": "1.9.0",
+    "@nuxt/scripts": "0.12.1",
+    "@nuxt/test-utils": "3.19.2",
+    "@img-comparison-slider/vue": "^8.0.0",
     "eslint": "^9.0.0",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.6.3",
-    "valibot": "^1.1.0",
-    "vue": "^3.5.22",
-    "vue-router": "^4.5.1",
-    "zod": "^4.1.12"
-  },
-  "devDependencies": {
-    "@img-comparison-slider/vue": "^8.0.0",
-    "@nuxt/content": "3.7.1",
-    "@nuxt/eslint": "1.9.0",
-    "@nuxt/image": "1.11.0",
-    "@nuxt/scripts": "0.12.1",
-    "@nuxt/test-utils": "3.19.2",
-    "@nuxt/ui": "4.0.1",
-    "@nuxtjs/i18n": "10.1.0",
-    "@types/node": "^24.7.0",
-    "nuxt": "^4.1.2"
+    "@types/node": "^24.7.0"
   }
 }

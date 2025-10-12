@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: "system",
+    preference: "dark",
     storageKey: "nuxt-color-mode",
     classSuffix: "",
   },

@@ -97,7 +97,7 @@
         <div class="flex md:hidden">
           <USlideover
             v-model:open="isSlideoverOpen"
-            :ui="{ content: 'w-full max-w-sm' }"
+            :ui="{ content: 'w-full max-w-xs' }"
           >
             <UIcon
               slot="trigger"
@@ -125,12 +125,27 @@
                   />
                 </div>
                 <div
-                  class="flex flex-col h-full gap-5 justify-between items-center"
+                  class="flex flex-col h-full gap-5 justify-between items-center p-5 pb-8"
                 >
                   <div class="flex flex-col items-center gap-10 pt-10 text-xl">
-                    <NavLinks />
+                    <NuxtLink to="/#home">{{ $t("nav.home") }}</NuxtLink>
+                    <NuxtLink to="/#about">{{ $t("nav.about") }}</NuxtLink>
+                    <NuxtLink to="/#contact">{{ $t("nav.contact") }}</NuxtLink>
+                    <NuxtLink to="/blog">{{ $t("nav.blog") }}</NuxtLink>
+                    <NuxtLink to="/pricing">{{ $t("nav.pricing") }}</NuxtLink>
+                    <NuxtLink to="/partnership">{{
+                      $t("nav.partnership")
+                    }}</NuxtLink>
+                    <NuxtLink to="/privacy">{{ $t("nav.privacy") }}</NuxtLink>
                   </div>
-                  <AppFooter />
+                  <UButton
+                    icon="i-lucide-sparkles"
+                    class="px-8 py-3 text-white bg-button w-full flex justify-center hover:bg-blue-700 rounded-full whitespace-nowrap"
+                    color="secondary"
+                    @click="$router.push('/demo')"
+                  >
+                    {{ $t("nav.tryNow") }}
+                  </UButton>
                 </div>
               </div>
             </template>
