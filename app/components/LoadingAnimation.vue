@@ -7,13 +7,12 @@
       <div class="grid grid-cols-2 gap-4 animate-spin">
         <UIcon name="i-lucide-dumbbell" class="w-12 h-12 bg-button" />
         <UIcon name="i-lucide-brain" class="w-12 h-12 bg-button" />
-
         <UIcon name="i-lucide-heart-pulse" class="w-12 h-12 bg-button" />
         <UIcon name="i-lucide-biceps-flexed" class="w-12 h-12 bg-button" />
       </div>
 
       <p
-        class="mt-5 text-white font-semibold text-lg transition-opacity duration-500"
+        class="mt-5 text-white font-semibold p-8 text-lg transition-opacity duration-500"
       >
         {{ currentStep }}
       </p>
@@ -41,7 +40,11 @@ let interval: NodeJS.Timeout | null = null;
 onMounted(() => {
   interval = setInterval(() => {
     stepIndex++;
-    currentStep.value = steps[stepIndex] || steps[steps.length - 1];
+    if (stepIndex < steps.length) {
+      currentStep.value = steps[stepIndex];
+    } else {
+      clearInterval(interval!);
+    }
   }, 3000);
 });
 

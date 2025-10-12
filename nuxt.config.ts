@@ -17,6 +17,8 @@ export default defineNuxtConfig({
   ssr: false,
 
   i18n: {
+    defaultLocale: "en",
+    detectBrowserLanguage: false,
     locales: [
       {
         code: "en",
@@ -34,10 +36,6 @@ export default defineNuxtConfig({
         file: "de.json",
       },
     ],
-    defaultLocale: "en",
-    detectBrowserLanguage: {
-      fallbackLocale: "en",
-    },
     strategy: "no_prefix",
   },
 

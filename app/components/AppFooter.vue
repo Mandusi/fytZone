@@ -6,7 +6,7 @@
       class="flex flex-col max-w-4xl w-full h-full justify-center items-center gap-4"
     >
       <div
-        class="flex flex-col gap-6 items-center w-full justify-between md:justify-baseline"
+        class="flex flex-col md:flex-row gap-6 items-center w-full justify-between"
       >
         <UButton
           icon="i-lucide-sparkles"
