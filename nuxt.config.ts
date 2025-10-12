@@ -35,6 +35,9 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: "en",
+    detectBrowserLanguage: {
+      fallbackLocale: "en",
+    },
     strategy: "no_prefix",
   },
 
