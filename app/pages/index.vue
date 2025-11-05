@@ -2,6 +2,7 @@
   <div>
     <AppHero />
     <AppAbout />
+    <AppGeneratedImages />
     <AppUserFeedback />
     <AppContact />
   </div>
