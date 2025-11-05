@@ -11,7 +11,7 @@
         images
           ? images.before
           : useColorMode().value === 'dark'
-            ? '/dark-before.jpg'
+            ? '/dark-before-1.jpg'
             : '/white-before.jpg'
       "
     />
@@ -22,7 +22,7 @@
         images
           ? images.after
           : useColorMode().value === 'dark'
-            ? '/dark-after.png'
+            ? '/dark-after-1.jpg'
             : '/white-after.png'
       "
     />
