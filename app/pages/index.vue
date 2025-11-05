@@ -1,8 +1,8 @@
 <template>
   <div>
     <AppHero />
-    <AppAbout />
     <AppGeneratedImages />
+    <AppAbout />
     <AppUserFeedback />
     <AppContact />
   </div>
